@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACC,iBAAkB,CAClB,YAAgB,CAChB,YAAgB,CAEhB,kCAAoC,CAEpC,QACD","file":"main.b93a33fc.chunk.css","sourcesContent":["body{\r\n\t--primary: #3cb7c0;\r\n\t--white: #ffffff;\r\n\t--black: #000000;\r\n\t\r\n\tfont-family: \"Open Sans\", sans-serif;\r\n\r\n\tmargin: 0;\r\n}"]}
