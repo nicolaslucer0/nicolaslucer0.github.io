@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import HeaderImage from "../Assets/img/header.jpg";
+import HeaderImageMobile from "../Assets/img/header_mobile.jpg";
+
 const Header = () => {
 
   document.addEventListener("mousemove", parallax);
@@ -50,8 +52,11 @@ const HeaderContainer = styled.div`
     background-position: center;
     background-position: 50% 50%;
     background-size: 120%;
-    
     background-attachment: fixed;
+
+    @media (max-width:768px) {
+      background-image: url(${HeaderImageMobile}) !important;
+    }
   }
 `;
 

@@ -7,3 +7,16 @@ body{
 
 	margin: 0;
 }
+
+
+
+.vertical-timeline-element-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.timeline-date {
+	color: black;
+}

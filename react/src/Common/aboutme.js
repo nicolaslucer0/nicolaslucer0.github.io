@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import img from "../Assets/img/me.jpg";
+import imgMobile from "../Assets/img/me_mobile.jpg";
+import imgwheel from "../Assets/img/wheel-min.png";
 const AboutMe = () => {
   return (
     <>
@@ -9,12 +11,19 @@ const AboutMe = () => {
         <FlexContainerColumn>
           <Title>Sobre mí</Title>
           <Text>
-            Mi nombre es Nicolás, soy de Buenos Aires, Argentina. Soy
+            Mi nombre es <Name>Nicolás</Name>, soy de Buenos Aires, Argentina. Soy
             desarrollador fullstack, me encanta crear y diseñar cosas nuevas.
             Actualmente estoy trabajando en redbee y también hago trabajos
-            Freelance. Soy profesor de informática.
+            Freelance. 
           </Text>
-          <Text>Amante de la música y de patinar.</Text>
+          <Text>
+            Ademas soy profesor y ejercí 5 años en el área de la educación.
+          </Text>
+          <Text>
+            Amante de la música y de{" "}
+              patinar.
+          </Text>
+              <Wheel className="first" src={imgwheel} />
         </FlexContainerColumn>
       </FlexContainerRow>
     </>
@@ -26,6 +35,9 @@ const FlexContainerRow = styled.div`
    {
     display: flex;
     height: 90vh;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -36,6 +48,10 @@ const FlexContainerColumn = styled.div`
     width: 40%;
     padding: 2em;
     margin: auto;
+    @media (max-width: 768px) {
+      width: 90%;
+      padding: 0;
+    }
   }
 `;
 
@@ -45,7 +61,12 @@ const Image = styled.div`
     height: 90vh;
     object-fit: cover;
     background-size: cover;
-    background-image: url(${img });
+    background-image: url(${img});
+    @media (max-width: 768px) {
+      background-image: url(${imgMobile});
+      width: 100%;
+      padding: 0;
+    }
   }
 `;
 const Text = styled.p`
@@ -53,6 +74,40 @@ const Text = styled.p`
     font-size: 20px;
   }
 `;
+
+const Name = styled.span`
+   {
+    position: relative;
+    font-size: 20px;
+    text-shadow: 2px -1px 0px #4f7dff;
+    font-weight: 700;
+  }
+`;
+const Wheel = styled.img`
+   {
+    position: relative;
+    font-size: 20px;
+    width: 3em;
+    margin: 0 0 0 auto;
+    -webkit-animation: spin 4s infinite linear;
+    &.first {
+        left: 20px;
+    }
+    @-moz-keyframes spin {
+        from { -moz-transform: rotate(0deg); }
+        to { -moz-transform: rotate(360deg); }
+    }
+    @-webkit-keyframes spin {
+        from { -webkit-transform: rotate(0deg); }
+        to { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+  }
+`;
+
 const Title = styled.h2`
    {
     font-size: 2em;
