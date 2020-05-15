@@ -60,10 +60,10 @@ const Wrapper = styled.div`
   }
 
   .sticky:not(.open) span:nth-child(1) {
-    background: var(--primary);
+    background: #001027;
   }
   .sticky:not(.open) span:nth-child(3) {
-    background: var(--primary);
+    background: #001027;
   }
 
   .sticky.open span:nth-child(1) {

@@ -1,12 +1,12 @@
 import React from "react";
-import "./Home.css";
-import Header from "../Header";
+import Header from "./header";
+import AboutMe from "./aboutme";
 
 const Home = () => {
   return (
     <>
       <Header />
-      
+      <AboutMe />
     </>
   );
 };

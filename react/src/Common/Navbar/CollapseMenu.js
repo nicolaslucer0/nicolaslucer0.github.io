@@ -25,11 +25,10 @@ const CollapseMenu = (props) => {
       }}
     >
       <NavLinks>
-        <Link onClick={handleChange} to="/servicios">Servicios</Link>
-        <Link onClick={handleChange} to="/clientes">Clientes</Link>
-        <Link onClick={handleChange} to="/nosotros">Nosotros</Link>
-        <Link onClick={handleChange} to="/trabajo">Trabajá con Nosotros</Link>
-        <Link onClick={handleChange} to="/contacto">Contacto</Link>
+        <Link onClick={handleChange}to="#blog">Sobre mí</Link>
+        <Link onClick={handleChange}to="#blog">Experiencia laboral</Link>
+        <Link onClick={handleChange}to="#blog">Proyectos</Link>
+        <Link onClick={handleChange}to="#blog">Tecnologías</Link>
       </NavLinks>
     </CollapseWrapper>
   );
@@ -38,7 +37,7 @@ const CollapseMenu = (props) => {
 export default CollapseMenu;
 
 const CollapseWrapper = styled(animated.div)`
-  background: var(--primary);
+  background: #001027;
   position: fixed;
   top: 0;
   left: 0;

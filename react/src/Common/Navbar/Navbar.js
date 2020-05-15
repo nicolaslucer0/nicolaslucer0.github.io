@@ -20,9 +20,11 @@ const Navbar = (props) => {
       <CollapseMenu navbarState={props.navbarState} onChange={handleChange} />
       <NavBar className={`${props.navbarState ? "open" : ""} ${ !!props.scroll ? "sticky" : ""}`} style={barAnimation}>
         <FlexContainer className={`${props.navbarState ? "open" : ""} ${ !!props.scroll ? "sticky" : ""}`}>
+        <Logo className={`${props.navbarState ? "open" : ""} ${!!props.scroll ? "sticky" : ""}`}>Nicolás</Logo>
           <NavList className={`${props.navbarState ? "open" : ""} ${!!props.scroll ? "sticky" : ""}`}>
-            <Link to="#blog">Sobre mí</Link>
+            <a href="#about-me">Sobre mí</a>
             <Link to="#blog">Experiencia laboral</Link>
+            <Link to="#blog">Proyectos</Link>
             <Link to="#blog">Tecnologías</Link>
           </NavList>
           <BurgerWrapper>
@@ -58,7 +60,6 @@ const NavBar = styled(animated.nav)`
 `;
 
 const FlexContainer = styled.div`
-  max-width: 120rem;
   display: flex;
   margin: auto;
   padding: 0 2rem;
@@ -87,6 +88,21 @@ const BurgerWrapper = styled.div`
   margin: auto 0;
 `;
 
+const Logo = styled.h1`
+{
+  display: none;
+  color: #001027;
+  &.sticky {
+    display:flex;
+  }
+  &.open {
+    display:flex;
+    color: white;
+  }
+}  
+
+`;
+
 const NavList = styled.ul`
    {
     display: flex;
@@ -102,9 +118,10 @@ const NavList = styled.ul`
       margin: 0 1em;
       color: white;
       text-decoration: none;
-      transition: 0.4s;
+      transition: 0.2s;
       &:hover {
-        color: var(--primary);
+        text-shadow: 3px -2px 0px #4f7dff;
+        transform: scale(1.01);
       }
     }
 
