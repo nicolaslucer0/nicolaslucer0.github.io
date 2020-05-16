@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./Common/Navbar/Navbar";
-import Footer from "./Common/footer";
 import Home from "./Common";
 
 const App = () => {
@@ -20,7 +19,6 @@ const App = () => {
           <Route exact path="/" component={Home} />
           {/*<Route component={NotFoundPage} />*/}
         </Switch>
-      <Footer />
       </Router>
     </>
   );

@@ -52,7 +52,7 @@ const FlexContainerColumn = styled.div`
    {
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 40%;
     padding: 2em;
     margin: auto;
     @media (max-width: 768px) {
@@ -66,7 +66,9 @@ const FlexContainerColumn = styled.div`
 
 const Picture = styled.picture`
    {
-    width: 100%;  
+    @media (max-width: 768px) {
+      width: 100
+    }
   }
 `;
 

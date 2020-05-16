@@ -136,6 +136,10 @@ const Title = styled.h2`
     width: 50%;
     text-align: center;
     padding: 2em 0;
+    margin: 5em 0;
     transform: rotate(1deg);
+    @media (max-width: 768px) {
+      margin: 2em 0;
+    }
   }
 `;
