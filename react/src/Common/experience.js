@@ -36,7 +36,7 @@ const Experience = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "#3DCED9", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  #3DCED9" }}
-            date="2010 - 2011"
+            date="2019 - 2020"
             dateClassName="timeline-date"
             iconStyle={{ background: "#3DCED9", color: "#3DCED9"}}
             icon={<Image src={glamit}/>}
@@ -131,5 +131,11 @@ const Image = styled.img`
 `;
 const Title = styled.h2`
    {
+    color: white;
+    background: #4f7d33;
+    width: 50%;
+    text-align: center;
+    padding: 2em 0;
+    transform: rotate(1deg);
   }
 `;

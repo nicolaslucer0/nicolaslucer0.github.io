@@ -7,23 +7,28 @@ const AboutMe = () => {
   return (
     <>
       <FlexContainerRow id="about-me">
-        <Image />
+        <Picture>
+          <source srcSet={`${imgMobile} 1x`} media="(max-width: 500px)" />
+          <Image
+            className="logo__apple"
+            srcSet={`${img} 2x`}
+            alt="Full Logo"
+          />
+        </Picture>
+        
         <FlexContainerColumn>
           <Title>Sobre mí</Title>
           <Text>
-            Mi nombre es <Name>Nicolás</Name>, soy de Buenos Aires, Argentina. Soy
-            desarrollador fullstack, me encanta crear y diseñar cosas nuevas.
-            Actualmente estoy trabajando en redbee y también hago trabajos
-            Freelance. 
+            Mi nombre es <Name>Nicolás</Name>, soy de Buenos Aires, Argentina.
+            Soy desarrollador fullstack, me encanta crear y diseñar cosas
+            nuevas. Actualmente estoy trabajando en redbee y también hago
+            trabajos Freelance.
           </Text>
           <Text>
             Ademas soy profesor y ejercí 5 años en el área de la educación.
           </Text>
-          <Text>
-            Amante de la música y de{" "}
-              patinar.
-          </Text>
-              <Wheel className="first" src={imgwheel} />
+          <Text>Amante de la música y de patinar.</Text>
+          <Wheel className="first" src={imgwheel} />
         </FlexContainerColumn>
       </FlexContainerRow>
     </>
@@ -37,6 +42,8 @@ const FlexContainerRow = styled.div`
     height: 90vh;
     @media (max-width: 768px) {
       flex-direction: column;
+      height: auto;
+
     }
   }
 `;
@@ -45,28 +52,33 @@ const FlexContainerColumn = styled.div`
    {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: auto;
     padding: 2em;
     margin: auto;
     @media (max-width: 768px) {
-      width: 90%;
+      width: 80%;
       padding: 0;
+      margin: auto;
+      height: auto;
     }
   }
 `;
 
-const Image = styled.div`
+const Picture = styled.picture`
    {
-    width: 30%;
-    height: 90vh;
-    object-fit: cover;
-    background-size: cover;
-    background-image: url(${img});
-    @media (max-width: 768px) {
-      background-image: url(${imgMobile});
-      width: 100%;
-      padding: 0;
-    }
+    width: 100%;  
+  }
+`;
+
+const Image = styled.img`
+   {
+     width: auto;
+     object-fit: cover;
+     height: 90vh;
+     @media (max-width: 768px) {
+      height: auto;
+       width: 100%;
+     }
   }
 `;
 const Text = styled.p`
@@ -91,19 +103,31 @@ const Wheel = styled.img`
     margin: 0 0 0 auto;
     -webkit-animation: spin 4s infinite linear;
     &.first {
-        left: 20px;
+      left: 20px;
     }
     @-moz-keyframes spin {
-        from { -moz-transform: rotate(0deg); }
-        to { -moz-transform: rotate(360deg); }
+      from {
+        -moz-transform: rotate(0deg);
+      }
+      to {
+        -moz-transform: rotate(360deg);
+      }
     }
     @-webkit-keyframes spin {
-        from { -webkit-transform: rotate(0deg); }
-        to { -webkit-transform: rotate(360deg); }
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
     }
     @keyframes spin {
-        from {transform:rotate(0deg);}
-        to {transform:rotate(360deg);}
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
   }
 `;

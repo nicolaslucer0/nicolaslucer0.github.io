@@ -6,12 +6,21 @@ const Projects = () => {
     <>
       <FlexContainerColumn id="projects">
         <Title>Proyectos</Title>
+        <FlexContainerRow>
+          <Image />
+          <Image />
+          <Image />
+          <Image />
+          <Image />
+          <Image />
+          <Image />
+          <Image />
+        </FlexContainerRow>
       </FlexContainerColumn>
     </>
   );
 };
 export default Projects;
-
 
 const FlexContainerRow = styled.div`
    {
@@ -49,20 +58,15 @@ const Image = styled.div`
     }
   }
 `;
-const Text = styled.p`
-   {
-    font-size: 20px;
-  }
-`;
-
-const Name = styled.span`
-   {
-    position: relative;
-    font-size: 20px;
-    text-shadow: 2px -1px 0px #4f7dff;
-    font-weight: 700;
-  }
-`;
 
 const Title = styled.h2`
-{}`;
+   {
+    color: white;
+    background: #4f7d33;
+    width: 50%;
+    text-align: center;
+    padding: 2em 0;
+    transform: rotate(2deg);
+    overflow: hidden;
+  }
+`;
