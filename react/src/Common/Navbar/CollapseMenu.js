@@ -25,10 +25,10 @@ const CollapseMenu = (props) => {
       }}
     >
       <NavLinks>
-        <Link onClick={handleChange}to="#blog">Sobre mí</Link>
-        <Link onClick={handleChange}to="#blog">Experiencia laboral</Link>
-        <Link onClick={handleChange}to="#blog">Proyectos</Link>
-        <Link onClick={handleChange}to="#blog">Tecnologías</Link>
+        <a onClick={handleChange} href="#about-me">Sobre mí</a>
+        <a onClick={handleChange} href="#experience">Experiencia laboral</a>
+        {/* <a onClick={handleChange} href="#blog">Proyectos</a> */}
+        <a onClick={handleChange} href="#technologies">Tecnologías</a>
       </NavLinks>
     </CollapseWrapper>
   );

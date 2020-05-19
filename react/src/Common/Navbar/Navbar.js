@@ -23,9 +23,9 @@ const Navbar = (props) => {
         <Logo className={`${props.navbarState ? "open" : ""} ${!!props.scroll ? "sticky" : ""}`}>Nicolás</Logo>
           <NavList className={`${props.navbarState ? "open" : ""} ${!!props.scroll ? "sticky" : ""}`}>
             <a href="#about-me">Sobre mí</a>
-            <Link to="#blog">Experiencia laboral</Link>
-            <Link to="#blog">Proyectos</Link>
-            <Link to="#blog">Tecnologías</Link>
+            <a href="#experience">Experiencia laboral</a>
+            {/* <Link to="#tecnologi">Proyectos</Link> */}
+            <a href="#technologies">Tecnologías</a>
           </NavList>
           <BurgerWrapper>
             <BurgerMenu
@@ -78,6 +78,9 @@ const FlexContainer = styled.div`
   }
   @media (max-width: 768px) {
     justify-content: flex-end;
+    &.open {
+      justify-content: space-between;
+    }  
     &.sticky {
       justify-content: space-between;
     }

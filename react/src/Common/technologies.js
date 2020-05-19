@@ -90,7 +90,7 @@ const Title = styled.h2`
     text-align: center;
     margin: 5em 0;
     padding: 2em 0;
-    transform: rotate(-2deg);
+    transform: rotate(-1deg);
     overflow: hidden;
     &::before {
       width: 400px;
