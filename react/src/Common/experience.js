@@ -54,7 +54,7 @@ const Experience = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "#DC6A09", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  #DC6A09" }}
-            date="2008 - 2010"
+            date="2019 - 2016"
             dateClassName="timeline-date"
             iconStyle={{ background: "black", color: "#fff" }}
             icon={<Image src={factorit}/>}
@@ -68,9 +68,25 @@ const Experience = () => {
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
+            contentStyle={{ background: "green", color: "#fff" }}
+            contentArrowStyle={{ borderRight: "7px solid  green" }}
+            date="2016 - 2014"
+            dateClassName="timeline-date"
+            iconStyle={{ background: "white", color: "#fff" }}
+            icon={<Image src={pilar}/>}
+          >
+            <h3 className="vertical-timeline-element-title">Profesor</h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              Instituto Nuestra señora del Pilar
+            </h4>
+            <p>Profesor de materias relacionadas con la programación y desarrollo de sistemas.</p>
+          </VerticalTimelineElement>
+          
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
             contentStyle={{ background: "gray", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  gray" }}
-            date="2006 - 2008"
+            date="2016 - 2012"
             dateClassName="timeline-date"
             iconStyle={{ background: "white", color: "#fff" }}
             icon={<Image src={sanju}/>}
@@ -82,21 +98,7 @@ const Experience = () => {
             <p>Profesor de materias relacionadas con la programación y desarrollo de sistemas.</p>
           </VerticalTimelineElement>
 
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "green", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  green" }}
-            date="2006 - 2008"
-            dateClassName="timeline-date"
-            iconStyle={{ background: "white", color: "#fff" }}
-            icon={<Image src={pilar}/>}
-          >
-            <h3 className="vertical-timeline-element-title">Profesor</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Instituto Nuestra señora del Pilar
-            </h4>
-            <p>Profesor de materias relacionadas con la programación y desarrollo de sistemas.</p>
-          </VerticalTimelineElement>
+          
           
           <VerticalTimelineElement
             dateClassName="timeline-date"
