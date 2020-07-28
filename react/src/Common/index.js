@@ -3,7 +3,6 @@ import Header from "./header";
 import AboutMe from "./aboutme";
 import Technologies from "./technologies";
 import Experience from "./experience";
-import Projects from "./projects";
 
 const Home = () => {
   return (
@@ -12,7 +11,7 @@ const Home = () => {
       <AboutMe />
       <Experience />
       <Technologies />
-      <Projects />
+      {/* <Projects /> */}
     </>
   );
 };

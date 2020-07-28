@@ -1,19 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import redbee from '../Assets/img/experience/redbee.svg'
-import glamit from '../Assets/img/experience/glamit.svg'
-import factorit from '../Assets/img/experience/factorit.svg'
-import sanju from '../Assets/img/experience/sanju.png'
-import pilar from '../Assets/img/experience/pilar.png'
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import redbee from "../Assets/img/experience/redbee.svg";
+import glamit from "../Assets/img/experience/glamit.svg";
+import factorit from "../Assets/img/experience/factorit.svg";
+import sanju from "../Assets/img/experience/sanju.png";
+import pilar from "../Assets/img/experience/pilar.png";
 const Experience = () => {
   return (
     <>
       <FlexContainerColumn id="experience">
-        <Title>Experiencias</Title>
+        <Title>Experience</Title>
         <VerticalTimeline>
-          
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "#E12027", color: "#fff" }}
@@ -21,33 +23,36 @@ const Experience = () => {
             date="2020 - actualidad"
             dateClassName="timeline-date"
             iconStyle={{ background: "#E12027", color: "#fff" }}
-            icon={<Image src={redbee}/>}
+            icon={<Image src={redbee} />}
           >
             <h3 className="vertical-timeline-element-title">
               Fullstack developer
             </h3>
             <h4 className="vertical-timeline-element-subtitle">Redbee</h4>
             <p>
-              Diseño y desarrollo de sistemas web y mobile, tanto front como back end.
+              Mobile design and development. Front and back end using Flutter
+              and Java. Part of{" "}
+              <Link href="https://play.google.com/store/apps/details?id=com.pedidosya.partnerpics&hl=es_419">
+                Partners pics
+              </Link>{" "}
+              build.
             </p>
           </VerticalTimelineElement>
-          
+
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "#3DCED9", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  #3DCED9" }}
             date="2019 - 2020"
             dateClassName="timeline-date"
-            iconStyle={{ background: "#3DCED9", color: "#3DCED9"}}
-            icon={<Image src={glamit}/>}
+            iconStyle={{ background: "#3DCED9", color: "#3DCED9" }}
+            icon={<Image src={glamit} />}
           >
-            <h3 className="vertical-timeline-element-title">Front end developer</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Glamit
-            </h4>
-            <p>
-              Diseño, maquetación y desarrollo de sitios de ecommerce para importantes marcas de moda.
-            </p>
+            <h3 className="vertical-timeline-element-title">
+              Front end developer
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">Glamit</h4>
+            <p>Frontend developer using ReactJS and Less, Ecommerce builder.</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -57,13 +62,13 @@ const Experience = () => {
             date="2019 - 2016"
             dateClassName="timeline-date"
             iconStyle={{ background: "black", color: "#fff" }}
-            icon={<Image src={factorit}/>}
+            icon={<Image src={factorit} />}
           >
-            <h3 className="vertical-timeline-element-title">Fullstack developer</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Factor IT
-            </h4>
-            <p>Diseño y desarrollo de sistemas web y mobile, tanto front como back end.</p>
+            <h3 className="vertical-timeline-element-title">
+              Fullstack developer
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">Factor IT</h4>
+            <p>Web development, working building Walmart apps.</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -73,15 +78,15 @@ const Experience = () => {
             date="2016 - 2014"
             dateClassName="timeline-date"
             iconStyle={{ background: "white", color: "#fff" }}
-            icon={<Image src={pilar}/>}
+            icon={<Image src={pilar} />}
           >
             <h3 className="vertical-timeline-element-title">Profesor</h3>
             <h4 className="vertical-timeline-element-subtitle">
               Instituto Nuestra señora del Pilar
             </h4>
-            <p>Profesor de materias relacionadas con la programación y desarrollo de sistemas.</p>
+            <p>IT professor, algorythms and office software.</p>
           </VerticalTimelineElement>
-          
+
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "gray", color: "#fff" }}
@@ -89,17 +94,15 @@ const Experience = () => {
             date="2016 - 2012"
             dateClassName="timeline-date"
             iconStyle={{ background: "white", color: "#fff" }}
-            icon={<Image src={sanju}/>}
+            icon={<Image src={sanju} />}
           >
             <h3 className="vertical-timeline-element-title">Profesor</h3>
             <h4 className="vertical-timeline-element-subtitle">
               Instituto Técnico Industrial San Judas Tadeo
             </h4>
-            <p>Profesor de materias relacionadas con la programación y desarrollo de sistemas.</p>
+            <p>IT professor, algorythms and C develompent.</p>
           </VerticalTimelineElement>
 
-          
-          
           <VerticalTimelineElement
             dateClassName="timeline-date"
             iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
@@ -131,6 +134,13 @@ const Image = styled.img`
     height: 90%;
   }
 `;
+const Link = styled.a`
+   {
+    font-weight: bold;
+    color: white;
+  }
+`;
+
 const Title = styled.h2`
    {
     color: white;
@@ -140,6 +150,10 @@ const Title = styled.h2`
     padding: 2em 0;
     margin: 5em 0;
     transform: rotate(1deg);
+    transition: 1s;
+    &:hover {
+      transform: rotate(-2deg);
+    }
     @media (max-width: 768px) {
       margin: 2em 0;
     }

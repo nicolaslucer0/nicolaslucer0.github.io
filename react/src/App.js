@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./Common/Navbar/Navbar";
-import Home from "./Common/home.js";
-
+import Home from "./Common";
+import NotFoundPage from "./Common/notFound.js";
 const App = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const scroll = useHasScrolled(100);
@@ -11,7 +11,21 @@ const App = () => {
     setNavbarOpen(!navbarOpen);
   };
 
-  return <Home />;
+  return (
+    <>
+      <Router>
+        <Navbar
+          scroll={scroll}
+          navbarState={navbarOpen}
+          onChange={handleChange}
+        />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </Router>
+    </>
+  );
 };
 export default App;
 

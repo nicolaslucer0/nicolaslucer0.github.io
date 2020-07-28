@@ -9,25 +9,22 @@ const AboutMe = () => {
       <FlexContainerRow id="about-me">
         <Picture>
           <source srcSet={`${imgMobile} 1x`} media="(max-width: 500px)" />
-          <Image
-            className="logo__apple"
-            srcSet={`${img} 2x`}
-            alt="Full Logo"
-          />
+          <Image className="logo__apple" srcSet={`${img} 2x`} alt="Full Logo" />
         </Picture>
-        
+
         <FlexContainerColumn>
-          <Title>Sobre mí</Title>
+          <Title>About me</Title>
           <Text>
-            Mi nombre es <Name>Nicolás</Name>, soy de Buenos Aires, Argentina.
-            Soy desarrollador fullstack, me encanta crear y diseñar cosas
-            nuevas. Actualmente estoy trabajando en redbee y también hago
-            trabajos Freelance.
+            My name is <Name>Nicolás</Name>, I'm from Buenos Aires, Argentina.
+            I'm fullstack developer, I love to create and design new things. I'm
+            currently working at{" "}
+            <Redbee target="_blank" href="https://www.redbee.io/">
+              redbee
+            </Redbee>
+            <b>.</b>
           </Text>
-          <Text>
-            Ademas soy profesor y ejercí 5 años en el área de la educación.
-          </Text>
-          <Text>Amante de la música y de patinar.</Text>
+          <Text>I worked as a I.T professor for 5 years.</Text>
+          <Text>I love skating and music.</Text>
           <Wheel className="first" src={imgwheel} />
         </FlexContainerColumn>
       </FlexContainerRow>
@@ -36,6 +33,17 @@ const AboutMe = () => {
 };
 export default AboutMe;
 
+const Redbee = styled.a`
+   {
+    display: inline;
+    color: #e12027;
+    font-weight: bold;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+`;
+
 const FlexContainerRow = styled.div`
    {
     display: flex;
@@ -43,7 +51,6 @@ const FlexContainerRow = styled.div`
     @media (max-width: 768px) {
       flex-direction: column;
       height: auto;
-
     }
   }
 `;
@@ -67,20 +74,20 @@ const FlexContainerColumn = styled.div`
 const Picture = styled.picture`
    {
     @media (max-width: 768px) {
-      width: 100
+      width: 100;
     }
   }
 `;
 
 const Image = styled.img`
    {
-     width: auto;
-     object-fit: cover;
-     height: 90vh;
-     @media (max-width: 768px) {
+    width: auto;
+    object-fit: cover;
+    height: 90vh;
+    @media (max-width: 768px) {
       height: auto;
-       width: 100%;
-     }
+      width: 100%;
+    }
   }
 `;
 const Text = styled.p`

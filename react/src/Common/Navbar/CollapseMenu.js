@@ -2,12 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 import { useSpring, animated } from "react-spring";
-import { Link } from "react-router-dom";
 
 const CollapseMenu = (props) => {
   const { open } = useSpring({ open: props.navbarState ? 0 : 1 });
   const { closed } = useSpring({ closed: props.navbarState ? 1 : 0 });
-  
+
   function handleChange() {
     props.onChange();
   }
@@ -20,15 +19,21 @@ const CollapseMenu = (props) => {
           .interpolate({ range: [0, 0.2, 0.3, 1], output: [0, -20, 0, -200] })
           .interpolate((openValue) => `translate3d(0, ${openValue}px, 0`),
         close: closed
-          .interpolate({ range: [1, 0.5, 0], output: [ -200, 0, -20 ,0] })
+          .interpolate({ range: [1, 0.5, 0], output: [-200, 0, -20, 0] })
           .interpolate((openValue) => `translate3d(0, ${openValue}px, 0`),
       }}
     >
       <NavLinks>
-        <a onClick={handleChange} href="#about-me">Sobre mí</a>
-        <a onClick={handleChange} href="#experience">Experiencia laboral</a>
+        <a onClick={handleChange} href="#about-me">
+          About me
+        </a>
+        <a onClick={handleChange} href="#experience">
+          Experiences
+        </a>
         {/* <a onClick={handleChange} href="#blog">Proyectos</a> */}
-        <a onClick={handleChange} href="#technologies">Tecnologías</a>
+        <a onClick={handleChange} href="#technologies">
+          Technologies
+        </a>
       </NavLinks>
     </CollapseWrapper>
   );
@@ -70,7 +75,6 @@ const NavLinks = styled.ul`
     cursor: pointer;
     transition: 0.3s;
     &:hover {
-      color: black;
       transform: scale(1.1);
     }
 

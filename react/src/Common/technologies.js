@@ -1,41 +1,34 @@
 import React from "react";
 import styled from "styled-components";
-import Carousel, { consts } from 'react-elastic-carousel';
 
 const Technologies = () => {
-
-  var w = 4;
-  if (window.innerWidth <= 768) 
-    w = 2;
-
   return (
     <>
       <FlexContainerColumn>
-        <Title>Tecnologías</Title>
+        <Title>Technologies</Title>
         <FlexContainerRow id="technologies">
-        <Carousel itemsToShow={w} renderArrow={myArrow}>
-            <Image src={require(`../Assets/img/technologies/java.png`)}></Image>
-            <Image src={require(`../Assets/img/technologies/spring.png`)}></Image>
-            <Image src={require(`../Assets/img/technologies/angular.png`)}></Image>
-            <Image src={require(`../Assets/img/technologies/react.png`)}></Image>
-            <Image src={require(`../Assets/img/technologies/flutter.png`)}></Image>
-            <Image src={require(`../Assets/img/technologies/vue.png`)}></Image>
-            <Image src={require(`../Assets/img/technologies/c.png`)}></Image>
-            <Image src={require(`../Assets/img/technologies/less.png`)}></Image>
-            <Image src={require(`../Assets/img/technologies/mysql.png`)}></Image>
-            <Image src={require(`../Assets/img/technologies/sqlserver.png`)}></Image>
-        </Carousel>
+          <Image
+            src={require(`../Assets/img/technologies/flutter.png`)}
+          ></Image>
+          <Image src={require(`../Assets/img/technologies/java.png`)}></Image>
+          <Image src={require(`../Assets/img/technologies/spring.png`)}></Image>
+          <Image src={require(`../Assets/img/technologies/react.png`)}></Image>
+          <Image
+            src={require(`../Assets/img/technologies/angular.png`)}
+          ></Image>
+          <Image src={require(`../Assets/img/technologies/vue.png`)}></Image>
+          <Image src={require(`../Assets/img/technologies/c.png`)}></Image>
+          <Image src={require(`../Assets/img/technologies/less.png`)}></Image>
+          <Image src={require(`../Assets/img/technologies/mysql.png`)}></Image>
+          <Image
+            src={require(`../Assets/img/technologies/sqlserver.png`)}
+          ></Image>
         </FlexContainerRow>
       </FlexContainerColumn>
     </>
   );
 };
 export default Technologies;
-
-const myArrow = ({ type, onClick }) => {
-  const pointer = type === consts.PREV ? '<' : '>'
-  return <Button onClick={onClick}>{pointer}</Button>
-}
 
 const FlexContainerRow = styled.div`
    {
@@ -45,6 +38,7 @@ const FlexContainerRow = styled.div`
     flex-wrap: wrap;
     padding: 2em;
     justify-content: space-around;
+
     @media (max-width: 768px) {
       flex-direction: column;
       height: auto;
@@ -67,20 +61,19 @@ const FlexContainerColumn = styled.div`
   }
 `;
 
-const Image = styled.img`{
-  width: 80%;
-  @media (max-width: 768px) {
-    width: 70%;
+const Image = styled.img`
+   {
+    height: 20%;
+    margin: 2em;
+    transition: 0.5s;
+    &:hover {
+      transform: rotate(-10deg);
+    }
+    @media (max-width: 768px) {
+      width: 70%;
+    }
   }
-}`;
-
-const Button = styled.button`{
-  background: none;
-  border: none;
-  transform: scaleY(2);
-  color: #3399aa;
-}`;
-
+`;
 
 const Title = styled.h2`
    {
@@ -102,6 +95,10 @@ const Title = styled.h2`
         #a48d01 50%,
         #a48d01 100%
       );
+    }
+    transition: 1s;
+    &:hover {
+      transform: rotate(2deg);
     }
     @media (max-width: 768px) {
       margin: 2em 0;

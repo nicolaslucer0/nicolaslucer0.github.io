@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
-import { Link } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
 
@@ -22,11 +21,13 @@ const Navbar = (props) => {
         <FlexContainer className={`${props.navbarState ? "open" : ""} ${ !!props.scroll ? "sticky" : ""}`}>
         <Logo className={`${props.navbarState ? "open" : ""} ${!!props.scroll ? "sticky" : ""}`}>Nicolás</Logo>
           <NavList className={`${props.navbarState ? "open" : ""} ${!!props.scroll ? "sticky" : ""}`}>
-            <a href="#about-me">Sobre mí</a>
-            <a href="#experience">Experiencia laboral</a>
+            <a href="#about-me">About me</a>
+            <a href="#experience">Experiences</a>
             {/* <Link to="#tecnologi">Proyectos</Link> */}
-            <a href="#technologies">Tecnologías</a>
+            <a href="#technologies">Technologies</a>
           </NavList>
+          <Marquee className={`${props.navbarState ? "open" : ""} ${ !!props.scroll ? "sticky" : ""}`} 
+          direction="right"><img alt="me just walking" src={require("../../Assets/img/me.gif")}/></Marquee>
           <BurgerWrapper>
             <BurgerMenu
               scrollClass={`${!!props.scroll ? "sticky" : ""}`}
@@ -41,6 +42,17 @@ const Navbar = (props) => {
 };
 
 export default Navbar;
+const Marquee = styled.marquee`{
+  &:not(.sticky) {
+    display: none;
+  }
+  &.open {
+    display: none;
+  }
+  img {
+    width: 2em;
+  }
+}`;
 
 const NavBar = styled(animated.nav)`
   position: fixed;
