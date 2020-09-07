@@ -5,7 +5,7 @@ import Home from "./Common";
 import NotFoundPage from "./Common/notFound.js";
 const App = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const scroll = useHasScrolled(100);
+  const scroll = useHasScrolled(700);
 
   const handleChange = () => {
     setNavbarOpen(!navbarOpen);

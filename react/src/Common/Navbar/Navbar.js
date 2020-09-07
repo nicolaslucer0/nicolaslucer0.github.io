@@ -17,6 +17,7 @@ const Navbar = (props) => {
   return (
     <>
       <CollapseMenu navbarState={props.navbarState} onChange={handleChange} />
+      <BlurBackground className={`${props.navbarState ? "open" : ""} ${ !!props.scroll ? "sticky" : ""}`} />
       <NavBar className={`${props.navbarState ? "open" : ""} ${ !!props.scroll ? "sticky" : ""}`} style={barAnimation}>
         <FlexContainer className={`${props.navbarState ? "open" : ""} ${ !!props.scroll ? "sticky" : ""}`}>
         <Logo className={`${props.navbarState ? "open" : ""} ${!!props.scroll ? "sticky" : ""}`}>Nicolás</Logo>
@@ -26,8 +27,7 @@ const Navbar = (props) => {
             {/* <Link to="#tecnologi">Proyectos</Link> */}
             <a href="#technologies">Technologies</a>
           </NavList>
-          <Marquee className={`${props.navbarState ? "open" : ""} ${ !!props.scroll ? "sticky" : ""}`} 
-          direction="right"><img alt="me just walking" src={require("../../Assets/img/me.gif")}/></Marquee>
+          
           <BurgerWrapper>
             <BurgerMenu
               scrollClass={`${!!props.scroll ? "sticky" : ""}`}
@@ -42,15 +42,22 @@ const Navbar = (props) => {
 };
 
 export default Navbar;
-const Marquee = styled.marquee`{
-  &:not(.sticky) {
-    display: none;
-  }
-  &.open {
-    display: none;
-  }
-  img {
-    width: 2em;
+
+const BlurBackground = styled.div`
+{
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  position: fixed;
+  z-index: 29;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(150%) blur(20px);
+  box-shadow: 0 0 6px 0 rgba(29,29,31,0.40);
+  background-color: rgba(29,29,31,0.40);
+  transition: 1s;
+  &.sticky {
+    background-color: rgba(255, 255, 255, 0.40);
   }
 }`;
 
@@ -59,7 +66,7 @@ const NavBar = styled(animated.nav)`
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 30;
   font-size: 1.4rem;
   height: 8vh;
   transition: 1s;
@@ -78,11 +85,9 @@ const FlexContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 5rem;
-  background: white;
   background: transparent;
   transition: 0.3s;
   &.sticky:not(.open) {
-    background: white;
     justify-content: space-between;
   }
   &.sticky.open {

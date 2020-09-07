@@ -52,7 +52,7 @@ const HeaderContainer = styled.div`
     background-position: center;
     background-position: 50% 50%;
     background-size: 120%;
-    background-attachment: fixed;
+    //background-attachment: fixed;
 
     @media (max-width:768px) {
       background-image: url(${HeaderImageMobile}) !important;
@@ -67,7 +67,7 @@ const Ampersan = styled.span`{
 }`;
 
 const FlexContainer = styled.div`
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   position: absolute;
   z-index: 1;
   top: 0;
