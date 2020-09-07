@@ -5,28 +5,10 @@ import HeaderImageMobile from "../Assets/img/header_mobile.jpg";
 
 const Header = () => {
 
-  document.addEventListener("mousemove", parallax);
-
-  function parallax(e) {
-    const parallax = document.querySelector("#parallax");
-    const title = document.querySelector("#subtitle");
-    const subtitle = document.querySelector("#title");
-    let _w = window.innerWidth / 2;
-    let _h = window.innerHeight / 2;
-    let _mouseX = e.clientX;
-    let _mouseY = e.clientY;
-    let _depth1 = `${50 - (_mouseX - _w) * 0.008}% ${50 - (_mouseY - _h) * 0.008}%`;
-    let _depth2 = `${50 - (_mouseX - _w) * 0.008}% ${50 - (_mouseY - _h) * 0.008}%`;
-    let _depth3 = `${50 - (_mouseX - _w) * 0.008}% ${50 - (_mouseY - _h) * 0.008}%`;
-    let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-    parallax.style.backgroundPosition = x;
-    title.style.transform = `translate(${(_mouseX - _w) * -0.02}px, ${(_mouseY - _h)  * -0.02}px)`;
-    subtitle.style.transform = `translate(${(_mouseX - _w) * -0.02}px, ${(_mouseY - _h)  * -0.02}px)`;
-  }
 
   return (
     <>
-      <HeaderContainer id="parallax">
+      <HeaderContainer>
         <FlexContainer>
           <TextContainer>
             <Subtitle id="title">Nicolás Lucero</Subtitle>

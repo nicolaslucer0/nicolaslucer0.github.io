@@ -7,22 +7,76 @@ const Technologies = () => {
       <FlexContainerColumn>
         <Title>Technologies</Title>
         <FlexContainerRow id="technologies">
-          <Image
-            src={require(`../Assets/img/technologies/flutter.png`)}
-          ></Image>
-          <Image src={require(`../Assets/img/technologies/java.png`)}></Image>
-          <Image src={require(`../Assets/img/technologies/spring.png`)}></Image>
-          <Image src={require(`../Assets/img/technologies/react.png`)}></Image>
-          <Image
-            src={require(`../Assets/img/technologies/angular.png`)}
-          ></Image>
-          <Image src={require(`../Assets/img/technologies/vue.png`)}></Image>
-          <Image src={require(`../Assets/img/technologies/c.png`)}></Image>
-          <Image src={require(`../Assets/img/technologies/less.png`)}></Image>
-          <Image src={require(`../Assets/img/technologies/mysql.png`)}></Image>
-          <Image
-            src={require(`../Assets/img/technologies/sqlserver.png`)}
-          ></Image>
+          <Card>
+            <Image src={require(`../Assets/img/technologies/flutter.png`)}/>
+            <Level>
+              <span className="meter capo"></span>
+            </Level>
+          </Card>
+
+          <Card>
+          <Image src={require(`../Assets/img/technologies/java.png`)}/>
+            <Level>
+              <span className="meter capo"></span>
+            </Level>
+          </Card>
+
+          <Card>
+          <Image src={require(`../Assets/img/technologies/spring.png`)}/>
+            <Level>
+              <span className="meter capo"></span>
+            </Level>
+          </Card>
+
+          <Card>
+          <Image src={require(`../Assets/img/technologies/react.png`)}/>
+            <Level>
+              <span className="meter capo"></span>
+            </Level>
+          </Card>
+
+          <Card>
+          <Image src={require(`../Assets/img/technologies/angular.png`)}/>
+            <Level>
+              <span className="meter capo"></span>
+            </Level>
+          </Card>
+
+          <Card>
+          <Image src={require(`../Assets/img/technologies/less.png`)}/>
+            <Level>
+              <span className="meter dios"></span>
+            </Level>
+          </Card>
+
+          <Card>
+            <Image src={require(`../Assets/img/technologies/vue.png`)}/>
+            <Level>
+              <span className="meter maso"></span>
+            </Level>
+          </Card>
+
+          <Card>
+            <Image src={require(`../Assets/img/technologies/c.png`)}/>
+            <Level>
+              <span className="meter maso"></span>
+            </Level>
+          </Card>
+
+          <Card>
+            <Image src={require(`../Assets/img/technologies/mysql.png`)}/>
+            <Level>
+              <span className="meter capo"></span>
+            </Level>
+          </Card>
+
+          <Card>
+            <Image src={require(`../Assets/img/technologies/sqlserver.png`)}/>
+            <Level>
+              <span className="meter" ></span>
+            </Level>
+          </Card>
+
         </FlexContainerRow>
       </FlexContainerColumn>
     </>
@@ -33,7 +87,6 @@ export default Technologies;
 const FlexContainerRow = styled.div`
    {
     display: flex;
-    height: 90vh;
     width: 90%;
     flex-wrap: wrap;
     padding: 2em;
@@ -61,16 +114,29 @@ const FlexContainerColumn = styled.div`
   }
 `;
 
+const Card = styled.div`{
+ width: 40%;
+ display: flex;
+ margin: 1em;
+    justify-content: space-between;
+    position: relative;
+    flex-grow: 0;
+    box-sizing: border-box;
+    align-items: center;
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+}`;
+
 const Image = styled.img`
    {
-    height: 20%;
-    margin: 2em;
+    width: 20%;
     transition: 0.5s;
     &:hover {
       transform: rotate(-10deg);
     }
     @media (max-width: 768px) {
-      width: 70%;
+      width: 30%;
     }
   }
 `;
@@ -105,3 +171,35 @@ const Title = styled.h2`
     }
   }
 `;
+
+const Level = styled.div`
+   {
+      height: 20px;
+      position: relative;
+      background: #eee;
+      border-radius: 7px;
+      width: 50%;
+      .meter {
+        display: block;
+        height: 100%;
+        background-color: rgb(43,194,83);
+        border-radius: 7px;
+        position: relative;
+        overflow: hidden;
+          &.malardo {
+            width: 25%;
+          }
+          &.maso {
+            width: 50%;
+          }
+          &.bien {
+            width: 75%;
+          }
+          &.capo {
+            width: 90%;
+          }
+          &.dios {
+            width: 100%;
+          }
+        }
+   }`;
