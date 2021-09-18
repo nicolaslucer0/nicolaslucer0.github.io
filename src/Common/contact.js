@@ -38,7 +38,10 @@ const Contact = () => {
             </InfoContainer>
             <InfoContainer>
               <Logo src={linkedin} />
-              <Link target="_blank" href="https://linkedin.com/nicolaslucero">
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/in/nicolaslucero1/"
+              >
                 Linkedin
               </Link>
             </InfoContainer>
@@ -98,7 +101,7 @@ const FlexContainerRow = styled.div`
   margin: auto;
   justify-content: center;
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `;
 
@@ -152,6 +155,6 @@ const Image = styled.img`
   position: relative;
   object-fit: contain;
   @media (max-width: 768px) {
-    width: 30%;
+    width: 100%;
   }
 `;

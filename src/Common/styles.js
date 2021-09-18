@@ -9,7 +9,7 @@ export const Title = styled.h2`
   color: rgba(0, 0, 255, 0.5);
   text-align: center;
   @media (max-width: 768px) {
-    margin: 2em 0;
+    margin: 1em 0;
     font-size: 3em;
     letter-spacing: -3px;
   }

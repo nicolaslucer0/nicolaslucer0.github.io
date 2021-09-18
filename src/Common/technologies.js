@@ -184,7 +184,14 @@ const Card = styled.div`
     transform: scale(1.05);
   }
   @media (max-width: 768px) {
-    width: 90%;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1em auto;
   }
 `;
 
@@ -195,7 +202,7 @@ const Image = styled.img`
     transform: rotate(-10deg);
   }
   @media (max-width: 768px) {
-    width: 30%;
+    width: 60px;
   }
 `;
 
@@ -205,6 +212,9 @@ const Level = styled.div`
   background: #eee;
   border-radius: 7px;
   width: 70%;
+  @media (max-width: 768px) {
+    width: 60%;
+  }
   .meter {
     display: block;
     height: 100%;
