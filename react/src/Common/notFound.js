@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Title } from "./styles";
+
 const NotFound = () => {
   return (
     <>
@@ -17,58 +19,43 @@ const NotFound = () => {
 export default NotFound;
 
 const FlexContainerRow = styled.div`
-   {
-    display: flex;
-    height: 100vh;
-    width: 70%;
-    margin: auto;
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
+  display: flex;
+  height: 100vh;
+  width: 70%;
+  margin: auto;
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 
 const FlexContainerColumn = styled.div`
-   {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    @media (max-width: 768px) {
-      width: 90%;
-      padding: 0;
-    }
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 0;
   }
 `;
 
 const Image = styled.img`
-   {
-    margin: auto;
+  margin: auto;
 
-    @media (max-width: 768px) {
-      width: 100%;
-    }
-  }
-`;
-
-const Title = styled.div`
-   {
-    text-align: center;
-    font-size: 10em;
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
 const Link = styled.a`
-   {
-    text-align: center;
-    font-size: 2em;
-    color: black;
-    text-decoration: none;
-    transition: 1s;
-    &:hover {
-      transform: scale(1.2);
-    }
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  text-decoration: none;
+  transition: 1s;
+  &:hover {
+    transform: scale(1.2);
   }
 `;

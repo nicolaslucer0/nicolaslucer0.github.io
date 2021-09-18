@@ -4,15 +4,15 @@ import HeaderImage from "../Assets/img/header.jpg";
 import HeaderImageMobile from "../Assets/img/header_mobile.jpg";
 
 const Header = () => {
-
-
   return (
     <>
       <HeaderContainer>
         <FlexContainer>
           <TextContainer>
             <Subtitle id="title">Nicolás Lucero</Subtitle>
-            <Title id="subtitle">Software developer <Ampersan>&</Ampersan> designer</Title>
+            <Title id="subtitle">
+              Software developer <Ampersan>&</Ampersan> designer
+            </Title>
           </TextContainer>
         </FlexContainer>
       </HeaderContainer>
@@ -36,17 +36,19 @@ const HeaderContainer = styled.div`
     background-size: 120%;
     //background-attachment: fixed;
 
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
       background-image: url(${HeaderImageMobile}) !important;
     }
   }
 `;
 
-const Ampersan = styled.span`{
-  font-size: 2em;
-  text-shadow: 4px -1px 0px #4f7dff;
+const Ampersan = styled.span`
+   {
+    font-size: 2em;
+    text-shadow: 4px -1px 0px #4f7dff;
     color: white;
-}`;
+  }
+`;
 
 const FlexContainer = styled.div`
   background: rgba(0, 0, 0, 0.4);

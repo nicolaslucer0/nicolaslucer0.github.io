@@ -10,11 +10,13 @@ import glamit from "../Assets/img/experience/glamit.svg";
 import factorit from "../Assets/img/experience/factorit.svg";
 import sanju from "../Assets/img/experience/sanju.png";
 import pilar from "../Assets/img/experience/pilar.png";
+import { Title } from "./styles";
+
 const Experience = () => {
   return (
     <>
       <FlexContainerColumn id="experience">
-        <Title>Experience</Title>
+        <Title>My work</Title>
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -115,47 +117,24 @@ const Experience = () => {
 export default Experience;
 
 const FlexContainerColumn = styled.div`
-   {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    @media (max-width: 768px) {
-      width: 90%;
-      padding: 0;
-    }
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #fafafa;
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 0;
   }
 `;
 
 const Image = styled.img`
-   {
-    width: 90%;
-    height: 90%;
-  }
+  width: 90%;
+  height: 90%;
 `;
 const Link = styled.a`
-   {
-    font-weight: bold;
-    color: white;
-  }
-`;
-
-const Title = styled.h2`
-   {
-    color: white;
-    background: #4f7d33;
-    width: 50%;
-    text-align: center;
-    padding: 2em 0;
-    margin: 5em 0;
-    transform: rotate(1deg);
-    transition: 1s;
-    &:hover {
-      transform: rotate(-2deg);
-    }
-    @media (max-width: 768px) {
-      margin: 2em 0;
-    }
-  }
+  font-weight: bold;
+  color: white;
 `;

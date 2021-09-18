@@ -3,6 +3,14 @@ import styled from "styled-components";
 import img from "../Assets/img/me.jpg";
 import imgMobile from "../Assets/img/me_mobile.jpg";
 import imgwheel from "../Assets/img/wheel-min.png";
+import logoRedbee from "../Assets/img/redbee_logo.png";
+import bandera from "../Assets/img/bandera.png";
+import location from "../Assets/img/location.png";
+import user from "../Assets/img/user.png";
+import job from "../Assets/img/job.png";
+import professor from "../Assets/img/Professor.png";
+import hobbies from "../Assets/img/hobbies.png";
+
 const AboutMe = () => {
   return (
     <>
@@ -13,19 +21,48 @@ const AboutMe = () => {
         </Picture>
 
         <FlexContainerColumn>
-          <Title>About me</Title>
-          <Text>
-            My name is <Name>Nicolás</Name>, I'm from Buenos Aires, Argentina.
-            I'm fullstack developer, I love to create and design new things. I'm
-            currently working at{" "}
+          <Title>
+            <div>
+              <TitleHi>Hi.</TitleHi>
+              <TitleDescription>
+                <div>
+                  I am <Name>Nicolás</Name>
+                </div>
+              </TitleDescription>
+            </div>
+          </Title>
+
+          <FlexContainer>
+            <LocationImage src={location} />
+            <Text>I'm from Buenos Aires, Argentina</Text>
+            <LocationImage src={bandera} />
+          </FlexContainer>
+
+          <FlexContainer>
+            <LocationImage src={user} />
+            <Text>
+              I'm fullstack developer, I love to create and design new things.
+            </Text>
+          </FlexContainer>
+
+          <FlexContainer>
+            <LocationImage src={job} />
+            <Text>I'm currently working at </Text>
             <Redbee target="_blank" href="https://www.redbee.io/">
-              redbee
+              <RedbeeImage src={logoRedbee} />
             </Redbee>
-            <b>.</b>
-          </Text>
-          <Text>I worked as a I.T professor for 5 years.</Text>
-          <Text>I love skating and music.</Text>
-          <Wheel className="first" src={imgwheel} />
+          </FlexContainer>
+
+          <FlexContainer>
+            <LocationImage src={professor} />
+            <Text>I have 5 years of experience teaching programming.</Text>
+          </FlexContainer>
+
+          <FlexContainer>
+            <LocationImage src={hobbies} />
+            <Text>I love skating and music.</Text>
+            <Wheel className="first" src={imgwheel} />
+          </FlexContainer>
         </FlexContainerColumn>
       </FlexContainerRow>
     </>
@@ -33,110 +70,133 @@ const AboutMe = () => {
 };
 export default AboutMe;
 
-const Redbee = styled.a`
-   {
-    display: inline;
-    color: #e12027;
-    font-weight: bold;
-    &:hover {
-      transform: scale(1.2);
-    }
+const LocationImage = styled.img`
+  width: 40px;
+  transition: 0.2s;
+  margin: 0 10px;
+  &:hover {
+    transform: scale(1.2);
   }
 `;
 
-const FlexContainerRow = styled.div`
-   {
+const RedbeeImage = styled.img`
+  width: 90px;
+  padding-left: 20px;
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
+
+const Redbee = styled.a``;
+
+const TitleHi = styled.div`
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+  line-height: 0.8;
+  @media (max-width: 768px) {
+    font-size: 1.5em;
+  }
+`;
+
+const TitleDescription = styled.div`
+  display: flex;
+  flex-flow: column;
+  div {
     display: flex;
-    height: 90vh;
-    @media (max-width: 768px) {
-      flex-direction: column;
-      height: auto;
-    }
+  }
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const FlexContainerRow = styled.div`
+  display: flex;
+  height: 90vh;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
   }
 `;
 
 const FlexContainerColumn = styled.div`
-   {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    padding: 2em;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 2em;
+  margin: auto;
+  @media (max-width: 768px) {
+    width: 80%;
+    padding: 0;
     margin: auto;
-    @media (max-width: 768px) {
-      width: 80%;
-      padding: 0;
-      margin: auto;
-      height: auto;
-    }
+    height: auto;
   }
 `;
 
 const Picture = styled.picture`
-   {
-    @media (max-width: 768px) {
-      width: 100;
-    }
+  @media (max-width: 768px) {
+    width: 100;
   }
 `;
 
 const Image = styled.img`
-   {
-    width: auto;
-    object-fit: cover;
-    height: 90vh;
-    @media (max-width: 768px) {
-      height: auto;
-      width: 100%;
-    }
+  width: auto;
+  object-fit: cover;
+  height: 90vh;
+  @media (max-width: 768px) {
+    height: auto;
+    width: 100%;
   }
 `;
 const Text = styled.p`
-   {
-    font-size: 20px;
-  }
+  font-size: 20px;
 `;
 
 const Name = styled.span`
-   {
-    position: relative;
-    font-size: 20px;
+  position: relative;
+  font-weight: 700;
+  transition: 0.3s;
+  font-size: 60px;
+  text-shadow: 2px -1px 0px #d20000;
+  &:hover {
     text-shadow: 2px -1px 0px #4f7dff;
-    font-weight: 700;
   }
 `;
 const Wheel = styled.img`
-   {
-    position: relative;
-    font-size: 20px;
-    width: 3em;
-    margin: 0 0 0 auto;
-    -webkit-animation: spin 4s infinite linear;
-    &.first {
-      left: 20px;
+  position: relative;
+  font-size: 20px;
+  width: 3em;
+  margin: 0 0 0 auto;
+  -webkit-animation: spin 4s infinite linear;
+  &.first {
+    left: 20px;
+  }
+  @-moz-keyframes spin {
+    from {
+      -moz-transform: rotate(0deg);
     }
-    @-moz-keyframes spin {
-      from {
-        -moz-transform: rotate(0deg);
-      }
-      to {
-        -moz-transform: rotate(360deg);
-      }
+    to {
+      -moz-transform: rotate(360deg);
     }
-    @-webkit-keyframes spin {
-      from {
-        -webkit-transform: rotate(0deg);
-      }
-      to {
-        -webkit-transform: rotate(360deg);
-      }
+  }
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
     }
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
 `;
@@ -144,13 +204,17 @@ const Wheel = styled.img`
 const Title = styled.h2`
    {
     font-size: 2em;
+
+    display: flex;
+    align-items: center;
+    margin: 3em 0;
     &:before {
-      content: "[ ";
+      content: "{  ";
       left: 0;
     }
 
     &:after {
-      content: " ]";
+      content: "  }";
       right: 0;
     }
 
@@ -159,7 +223,9 @@ const Title = styled.h2`
       top: 0;
 
       color: #001027;
-      font-size: 42px;
+      color: #001027;
+      font-size: 200px;
+      font-weight: 100;
       line-height: 40px;
 
       -webkit-animation-name: opacity;
@@ -168,6 +234,19 @@ const Title = styled.h2`
       animation-name: opacity;
       animation-duration: 2s;
       animation-iteration-count: infinite;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1em;
+      justify-content: center;
+      margin: 4em 0;
+      span {
+        font-size: 1em;
+      }
+      &:after,
+      &:before {
+        font-size: 140px;
+      }
     }
 
     @-webkit-keyframes opacity {
