@@ -22,16 +22,16 @@ v44h-352z"
         />
       </defs>
       <g class="parallax1">
-        <use xlinkHref="#gentle-wave" x="50" y="3" fill="#F7E305" />
+        <use xlinkHref="#gentle-wave" x="50" y="15" fill="#ff4425bb" />
       </g>
       <g class="parallax2">
-        <use xlinkHref="#gentle-wave" x="50" y="0" fill="#00F57F" />
+        <use xlinkHref="#gentle-wave" x="50" y="12" fill="#00F57Fbb" />
       </g>
       <g class="parallax3">
-        <use xlinkHref="#gentle-wave" x="50" y="9" fill="#EB10E3" />
+        <use xlinkHref="#gentle-wave" x="50" y="21" fill="#EB10E3bb" />
       </g>
       <g class="parallax4">
-        <use xlinkHref="#gentle-wave" x="50" y="6" fill="#002499" />
+        <use xlinkHref="#gentle-wave" x="50" y="18" fill="#002499bb" />
       </g>
     </Svg>
   );

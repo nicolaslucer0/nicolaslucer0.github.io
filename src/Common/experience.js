@@ -17,13 +17,14 @@ const Experience = () => {
     <>
       <FlexContainerColumn id="experience">
         <Title>My work</Title>
-        <VerticalTimeline>
+        <VerticalTimeline animate={false}>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "#E12027", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  #E12027" }}
             date="2020 - actualidad"
             dateClassName="timeline-date"
+            animate={false}
             iconStyle={{ background: "#E12027", color: "#fff" }}
             icon={<Image src={redbee} />}
           >
@@ -45,7 +46,7 @@ const Experience = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "#3DCED9", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  #3DCED9" }}
-            date="2019 - 2020"
+            date="2020 - 2019"
             dateClassName="timeline-date"
             iconStyle={{ background: "#3DCED9", color: "#3DCED9" }}
             icon={<Image src={glamit} />}
@@ -61,7 +62,7 @@ const Experience = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "#DC6A09", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  #DC6A09" }}
-            date="2019 - 2016"
+            date="2016 - 2019"
             dateClassName="timeline-date"
             iconStyle={{ background: "black", color: "#fff" }}
             icon={<Image src={factorit} />}
@@ -77,7 +78,7 @@ const Experience = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "green", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  green" }}
-            date="2016 - 2014"
+            date="2014 - 2016"
             dateClassName="timeline-date"
             iconStyle={{ background: "white", color: "#fff" }}
             icon={<Image src={pilar} />}
@@ -93,7 +94,7 @@ const Experience = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "gray", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  gray" }}
-            date="2016 - 2012"
+            date="2012 - 2016"
             dateClassName="timeline-date"
             iconStyle={{ background: "white", color: "#fff" }}
             icon={<Image src={sanju} />}

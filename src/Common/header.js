@@ -23,31 +23,27 @@ const Header = () => {
 export default Header;
 
 const HeaderContainer = styled.div`
-   {
-    width: 100%;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-    height: 100vh;
-    background-image: url(${HeaderImage});
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position: 50% 50%;
-    background-size: 120%;
-    //background-attachment: fixed;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 100vh;
+  background-image: url(${HeaderImage});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
+  background-size: 120%;
+  //background-attachment: fixed;
 
-    @media (max-width: 768px) {
-      background-image: url(${HeaderImageMobile}) !important;
-    }
+  @media (max-width: 768px) {
+    background-image: url(${HeaderImageMobile}) !important;
   }
 `;
 
 const Ampersan = styled.span`
-   {
-    font-size: 2em;
-    text-shadow: 4px -1px 0px #4f7dff;
-    color: white;
-  }
+  font-size: 2em;
+  text-shadow: 4px -1px 0px #4f7dff;
+  color: white;
 `;
 
 const FlexContainer = styled.div`
