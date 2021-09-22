@@ -17,17 +17,40 @@ const Navbar = (props) => {
   return (
     <>
       <CollapseMenu navbarState={props.navbarState} onChange={handleChange} />
-      <BlurBackground className={`${props.navbarState ? "open" : ""} ${ !!props.scroll ? "sticky" : ""}`} />
-      <NavBar className={`${props.navbarState ? "open" : ""} ${ !!props.scroll ? "sticky" : ""}`} style={barAnimation}>
-        <FlexContainer className={`${props.navbarState ? "open" : ""} ${ !!props.scroll ? "sticky" : ""}`}>
-        <Logo className={`${props.navbarState ? "open" : ""} ${!!props.scroll ? "sticky" : ""}`}>Nicolás</Logo>
-          <NavList className={`${props.navbarState ? "open" : ""} ${!!props.scroll ? "sticky" : ""}`}>
+      <BlurBackground
+        className={`${props.navbarState ? "open" : ""} ${
+          !!props.scroll ? "sticky" : ""
+        }`}
+      />
+      <NavBar
+        className={`${props.navbarState ? "open" : ""} ${
+          !!props.scroll ? "sticky" : ""
+        }`}
+        style={barAnimation}
+      >
+        <FlexContainer
+          className={`${props.navbarState ? "open" : ""} ${
+            !!props.scroll ? "sticky" : ""
+          }`}
+        >
+          <Logo
+            className={`${props.navbarState ? "open" : ""} ${
+              !!props.scroll ? "sticky" : ""
+            }`}
+          >
+            Nicolás
+          </Logo>
+          <NavList
+            className={`${props.navbarState ? "open" : ""} ${
+              !!props.scroll ? "sticky" : ""
+            }`}
+          >
             <a href="#about-me">About me</a>
             <a href="#experience">Experiences</a>
-            {/* <Link to="#tecnologi">Proyectos</Link> */}
             <a href="#technologies">Technologies</a>
+            <a href="#contact">How to contact me?</a>
           </NavList>
-          
+
           <BurgerWrapper>
             <BurgerMenu
               scrollClass={`${!!props.scroll ? "sticky" : ""}`}
@@ -44,7 +67,6 @@ const Navbar = (props) => {
 export default Navbar;
 
 const BlurBackground = styled.div`
-{
   width: 100%;
   top: 0;
   left: 0;
@@ -53,13 +75,13 @@ const BlurBackground = styled.div`
   z-index: 29;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(150%) blur(20px);
-  box-shadow: 0 0 6px 0 rgba(29,29,31,0.40);
-  background-color: rgba(29,29,31,0.40);
+  box-shadow: 0 0 6px 0 rgba(29, 29, 31, 0.4);
+  background-color: rgba(29, 29, 31, 0.4);
   transition: 1s;
   &.sticky {
-    background-color: rgba(255, 255, 255, 0.40);
+    background-color: rgba(255, 255, 255, 0.4);
   }
-}`;
+`;
 
 const NavBar = styled(animated.nav)`
   position: fixed;
@@ -97,7 +119,7 @@ const FlexContainer = styled.div`
     justify-content: flex-end;
     &.open {
       justify-content: space-between;
-    }  
+    }
     &.sticky {
       justify-content: space-between;
     }
@@ -109,44 +131,39 @@ const BurgerWrapper = styled.div`
 `;
 
 const Logo = styled.h1`
-{
   display: none;
   color: #001027;
   &.sticky {
-    display:flex;
+    display: flex;
   }
   &.open {
-    display:flex;
+    display: flex;
     color: white;
   }
-}  
-
 `;
 
 const NavList = styled.ul`
-   {
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    &.open {
-      display: none;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  &.open {
+    display: none;
+  }
+  &.sticky {
+    display: none;
+  }
+  a {
+    margin: 0 1em;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+    &:hover {
+      text-shadow: 3px -2px 0px #4f7dff;
+      transform: scale(1.01);
     }
-    &.sticky {
-      display: none;
-    }
-    a {
-      margin: 0 1em;
-      color: white;
-      text-decoration: none;
-      transition: 0.2s;
-      &:hover {
-        text-shadow: 3px -2px 0px #4f7dff;
-        transform: scale(1.01);
-      }
-    }
+  }
 
-    @media (max-width: 768px) {
-      display: none;
-    }
+  @media (max-width: 768px) {
+    display: none;
   }
 `;

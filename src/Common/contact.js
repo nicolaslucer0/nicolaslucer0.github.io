@@ -11,7 +11,7 @@ import aboutme from "../Assets/img/social/me.png";
 const Contact = () => {
   return (
     <>
-      <FlexContainerColumn id="projects">
+      <FlexContainerColumn id="contact">
         <Title>How to contact me?</Title>
         <Subtitle>
           Ok, lets be honest, <b>I'll read gmail first</b>, so if it is urgent,
@@ -118,7 +118,7 @@ const FlexContainerColumn = styled.div`
 `;
 
 const Card = styled.div`
-  width: 20%;
+  width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: self-start;

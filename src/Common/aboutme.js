@@ -171,6 +171,7 @@ const Wheel = styled.img`
   font-size: 20px;
   width: 3em;
   margin: 0 0 0 auto;
+  animation: spin 4s infinite linear;
   -webkit-animation: spin 4s infinite linear;
   &.first {
     left: 20px;
@@ -202,7 +203,7 @@ const Wheel = styled.img`
 `;
 
 const Title = styled.h2`
-  font-size: 2em;
+  font-size: 1em;
 
   display: flex;
   align-items: center;

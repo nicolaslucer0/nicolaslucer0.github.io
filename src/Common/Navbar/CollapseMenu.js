@@ -30,9 +30,11 @@ const CollapseMenu = (props) => {
         <a onClick={handleChange} href="#experience">
           Experiences
         </a>
-        {/* <a onClick={handleChange} href="#blog">Proyectos</a> */}
         <a onClick={handleChange} href="#technologies">
           Technologies
+        </a>
+        <a onClick={handleChange} href="#contact">
+          How to contact me?
         </a>
       </NavLinks>
     </CollapseWrapper>

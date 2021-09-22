@@ -4,7 +4,7 @@ export const Title = styled.h2`
   display: inline;
   position: relative;
   letter-spacing: -5px;
-  font-size: 6em;
+  font-size: 4em;
   font-weight: lighter;
   color: rgba(0, 0, 255, 0.5);
   text-align: center;
