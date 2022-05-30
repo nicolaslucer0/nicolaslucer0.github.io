@@ -13,11 +13,6 @@ export const Contact = () => {
     <>
       <FlexContainerColumn id="contact">
         <Title>How to contact me?</Title>
-        <Subtitle>
-          Ok, lets be honest, <b>I'll read gmail first</b>, so if it is urgent,
-          <b>email me</b>. <br />
-          Anyway I leave you my social accounts:
-        </Subtitle>
         <FlexContainerRow>
           <Image
             src={contact}
@@ -99,6 +94,10 @@ const FlexContainerRow = styled.div`
   display: flex;
   margin: auto;
   justify-content: center;
+  object-fit: cover;
+  position: relative;
+  width: 43%;
+  box-shadow: 3px 3px 5px 0px #00000054;
   @media (max-width: 768px) {
     flex-direction: column-reverse;
   }
@@ -117,18 +116,16 @@ const FlexContainerColumn = styled.div`
 `;
 
 const Card = styled.div`
-  width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: self-start;
   flex-direction: column;
-  margin: 1em;
   position: relative;
   flex-grow: 0;
   box-sizing: border-box;
   align-items: center;
   box-shadow: 3px 3px 5px 0px #00000054;
-  border-radius: 5px;
+  border-radius: 0 10px 10px 0;
   border: 1px solid #ececec;
   transition: 0.5s;
   background-color: white;
@@ -138,21 +135,16 @@ const Card = styled.div`
   }
 `;
 
-const Subtitle = styled.h4`
-  font-weight: normal;
-  text-align: center;
-  font-size: 1.5em;
-  font-family: raleway;
-`;
-
 const Logo = styled.img`
   width: 10%;
 `;
 
 const Image = styled.img`
-  width: 30%;
+  width: 60%;
   position: relative;
   object-fit: contain;
+  border-radius: 10px 0 0 10px;
+
   @media (max-width: 768px) {
     width: 100%;
   }

@@ -18,44 +18,27 @@ const HamburgerButton = styled.div`
   }
 `;
 
-const BlurBackground = styled.div`
+const StyledNavbar = styled(animated.nav)`
+  position: relative;
   width: 100%;
+  z-index: 30;
+  font-size: 1.4rem;
+  margin: auto;
+  padding: 0 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
   left: 0;
   position: fixed;
-  z-index: 2;
   height: 8vh;
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(150%) blur(20px);
-  box-shadow: 0 0 6px 0 rgba(29, 29, 31, 0.4);
-  background-color: rgba(29, 29, 31, 0.4);
+  background: linear-gradient(180deg, #00000078, transparent);
   transition: 0.5s;
   &.white {
     background-color: transparent;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     box-shadow: none;
-  }
-`;
-
-const StyledNavbar = styled(animated.nav)`
-  position: relative;
-  width: auto;
-  top: 0;
-  left: 0;
-  z-index: 30;
-  font-size: 1.4rem;
-  height: 8vh;
-  transition: 0.5s;
-  background: transparent;
-  padding: 0;
-  margin: auto;
-  padding: 0 2em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  &.white {
-    background-color: transparent;
   }
 `;
 
@@ -89,42 +72,40 @@ export const Navbar = ({
   };
 
   return (
-    <BlurBackground className={isOpen ? "white" : ""}>
-      <StyledNavbar className={isOpen ? "white" : ""}>
-        {openButton(({ opacity, transform }, isOpen) =>
-          !isOpen ? (
-            <animated.div
-              key={1}
-              style={{
-                position: "absolute",
-                opacity: opacity.to({ range: [0.0, 1.0], output: [0, 1] }),
-                transform: transform,
-              }}
+    <StyledNavbar className={isOpen ? "white" : ""}>
+      {openButton(({ opacity, transform }, isOpen) =>
+        !isOpen ? (
+          <animated.div
+            key={1}
+            style={{
+              position: "absolute",
+              opacity: opacity.to({ range: [0.0, 1.0], output: [0, 1] }),
+              transform: transform,
+            }}
+          >
+            <HamburgerButton onClick={toggleMenu}>
+              <MdMenu />
+            </HamburgerButton>
+          </animated.div>
+        ) : (
+          <animated.div
+            key={2}
+            style={{
+              position: "absolute",
+              opacity: opacity.to({ range: [0.0, 1.0], output: [0, 1] }),
+              transform: transform,
+            }}
+          >
+            <HamburgerButton
+              className={isOpen ? "black" : ""}
+              onClick={toggleMenu}
             >
-              <HamburgerButton onClick={toggleMenu}>
-                <MdMenu />
-              </HamburgerButton>
-            </animated.div>
-          ) : (
-            <animated.div
-              key={2}
-              style={{
-                position: "absolute",
-                opacity: opacity.to({ range: [0.0, 1.0], output: [0, 1] }),
-                transform: transform,
-              }}
-            >
-              <HamburgerButton
-                className={isOpen ? "black" : ""}
-                onClick={toggleMenu}
-              >
-                <MdClose />
-              </HamburgerButton>
-            </animated.div>
-          )
-        )}
-        <ThemeSwitch toggleTheme={toggleTheme} theme={theme} />
-      </StyledNavbar>
-    </BlurBackground>
+              <MdClose />
+            </HamburgerButton>
+          </animated.div>
+        )
+      )}
+      <ThemeSwitch toggleTheme={toggleTheme} theme={theme} />
+    </StyledNavbar>
   );
 };

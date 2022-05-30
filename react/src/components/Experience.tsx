@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Title } from "./Styles";
-
+import redbee from "./../Assets/img/experience/redbee.svg";
+import glamit from "./../Assets/img/experience/glamit.svg";
+import factorit from "./../Assets/img/experience/factorit.svg";
+import sanju from "./../Assets/img/experience/sanju.png";
 export const Experience = () => {
   return (
     <>
@@ -10,45 +13,55 @@ export const Experience = () => {
         <VerticalTimeline>
           <VerticalTimelineElement className="redbee">
             <Image src={redbee} />
-            <h3 className="vertical-timeline-element-title">
-              Fullstack developer
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">redbee</h4>
-            <p>
-              Mobile design and development. Front and back end using Flutter
-              and Java. Part of{" "}
-              <Link href="https://play.google.com/store/apps/details?id=com.pedidosya.partnerpics&hl=es_419">
-                Partners pics
-              </Link>{" "}
-              build.
-            </p>
+            <div>
+              <h3 className="vertical-timeline-element-title">
+                Fullstack developer
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">redbee</h4>
+              <p>
+                Mobile design and development. Front and back end using Flutter
+                and Java. Part of{" "}
+                <Link href="https://play.google.com/store/apps/details?id=com.pedidosya.partnerpics&hl=es_419">
+                  Partners pics
+                </Link>{" "}
+                build.
+              </p>
+            </div>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement className="glamit">
             <Image src={glamit} />
-            <h3 className="vertical-timeline-element-title">
-              Front end developer
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">Glamit</h4>
-            <p>Frontend developer using ReactJS and Less, Ecommerce builder.</p>
+            <div>
+              <h3 className="vertical-timeline-element-title">
+                Front end developer
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">Glamit</h4>
+              <p>
+                Frontend developer using ReactJS and Less, Ecommerce builder.
+              </p>
+            </div>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement className="fit">
             <Image src={factorit} />
-            <h3 className="vertical-timeline-element-title">
-              Fullstack developer
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">Factor IT</h4>
-            <p>Web development, working building Walmart apps.</p>
+            <div>
+              <h3 className="vertical-timeline-element-title">
+                Fullstack developer
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">Factor IT</h4>
+              <p>Web development, working building Walmart apps.</p>
+            </div>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement className="vertical-timeline-element--work">
             <Image src={sanju} />
-            <h3 className="vertical-timeline-element-title">Profesor</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Instituto Técnico Industrial San Judas Tadeo
-            </h4>
-            <p>IT professor, algorythms and C develompent.</p>
+            <div>
+              <h3 className="vertical-timeline-element-title">Profesor</h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Instituto Técnico Industrial San Judas Tadeo
+              </h4>
+              <p>IT professor, algorythms and C develompent.</p>
+            </div>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </FlexContainerColumn>
@@ -71,14 +84,19 @@ const FlexContainerColumn = styled.div`
 `;
 
 const Image = styled.img`
-  width: 90%;
-  height: 90%;
+  width: 20%;
+  padding: 1em;
 `;
 const Link = styled.a`
   font-weight: bold;
   color: white;
 `;
-const VerticalTimeline = styled.div``;
+const VerticalTimeline = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+`;
 const VerticalTimelineElement = styled.div`
   background: #f0f0f0;
   max-width: 50%;
@@ -86,7 +104,7 @@ const VerticalTimelineElement = styled.div`
   padding: 1em;
   margin: 1em;
   box-shadow: 1px 1px 2px 0px #cbcbcb;
-
+  display: flex;
   &.redbee {
     background: #e12027;
     color: white;
