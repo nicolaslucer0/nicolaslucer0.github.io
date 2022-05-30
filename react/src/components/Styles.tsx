@@ -6,7 +6,6 @@ export const Title = styled.h2`
   letter-spacing: -3px;
   font-size: 4em;
   font-weight: lighter;
-  color: rgba(0, 0, 255, 0.5);
   text-align: center;
   @media (max-width: 768px) {
     margin: 1em 0;

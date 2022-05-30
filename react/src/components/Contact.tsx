@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { Title } from "./Styles";
 import instagram from "../Assets/img/social/instagram.png";
@@ -7,12 +6,13 @@ import linkedin from "../Assets/img/social/linkedin.png";
 import contact from "../Assets/img/contact.jpeg";
 import twitch from "../Assets/img/social/twitch.png";
 import aboutme from "../Assets/img/social/me.png";
+import { ThemeProps } from "../Commons/ThemeProps";
 
-export const Contact = () => {
+export const Contact = ({ theme }: ThemeProps) => {
   return (
     <>
       <FlexContainerColumn id="contact">
-        <Title>How to contact me?</Title>
+        <Title className={`title-${theme}`}>How to contact me?</Title>
         <FlexContainerRow>
           <Image
             src={contact}
@@ -100,6 +100,7 @@ const FlexContainerRow = styled.div`
   box-shadow: 3px 3px 5px 0px #00000054;
   @media (max-width: 768px) {
     flex-direction: column-reverse;
+    width: 100%;
   }
 `;
 
@@ -131,7 +132,10 @@ const Card = styled.div`
   background-color: white;
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 10px 10px 0 0;
   }
 `;
 
@@ -147,5 +151,6 @@ const Image = styled.img`
 
   @media (max-width: 768px) {
     width: 100%;
+    border-radius: 0 0 10px 10px;
   }
 `;

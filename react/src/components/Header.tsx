@@ -27,9 +27,7 @@ const HeaderContainer = styled.div`
   background-image: url(${HeaderImage});
   background-repeat: no-repeat;
   background-position: center;
-  background-position: 50% 50%;
-  background-size: 120%;
-  //background-attachment: fixed;
+  background-size: 140%;
 
   @media (max-width: 768px) {
     background-image: url(${HeaderImageMobile}) !important;
@@ -68,6 +66,11 @@ const Title = styled.div`
   text-transform: uppercase;
   background: #5d7693c7;
   padding: 5px 10px;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    margin: 1em auto;
+  }
 `;
 const Subtitle = styled.div`
   font-size: 1.3em;

@@ -10,8 +10,9 @@ import user from "../Assets/img/user.png";
 import job from "../Assets/img/job.png";
 import professor from "../Assets/img/Professor.png";
 import hobbies from "../Assets/img/hobbies.png";
+import { ThemeProps } from "../Commons/ThemeProps";
 
-export const AboutMe = () => {
+export const AboutMe = ({ theme }: ThemeProps) => {
   return (
     <>
       <FlexContainerRow id="about-me">
@@ -239,7 +240,7 @@ const Title = styled.h2`
   @media (max-width: 768px) {
     font-size: 2em;
     justify-content: center;
-    margin: 4em 0;
+    margin: 3em 0;
     span {
       font-size: 1em;
     }

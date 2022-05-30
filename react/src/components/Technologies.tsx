@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import java from "../Assets/img/technologies/java.png";
 import flutter from "../Assets/img/technologies/flutter.png";
@@ -14,8 +13,9 @@ import kotlin from "../Assets/img/technologies/kotlin.png";
 import go from "../Assets/img/technologies/go.png";
 import postgre from "../Assets/img/technologies/postgres.png";
 import { Title } from "./Styles";
+import { ThemeProps } from "../Commons/ThemeProps";
 
-export const Technologies = () => {
+export const Technologies = ({ theme }: ThemeProps) => {
   return (
     <>
       <FlexContainerColumn>
@@ -137,7 +137,7 @@ const FlexContainerRow = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     height: auto;
-    width: 90%;
+    width: 100%;
   }
 `;
 

@@ -1,4 +1,3 @@
-import React from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import { animated, config, useTransition } from "react-spring";
 import styled from "styled-components";
@@ -34,6 +33,8 @@ const StyledNavbar = styled(animated.nav)`
   height: 8vh;
   background: linear-gradient(180deg, #00000078, transparent);
   transition: 0.5s;
+  box-sizing: border-box;
+
   &.white {
     background-color: transparent;
     backdrop-filter: none;

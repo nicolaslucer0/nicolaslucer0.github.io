@@ -1,11 +1,12 @@
-import React from "react";
 import styled from "styled-components";
 import { Title } from "./Styles";
 import redbee from "./../Assets/img/experience/redbee.svg";
 import glamit from "./../Assets/img/experience/glamit.svg";
 import factorit from "./../Assets/img/experience/factorit.svg";
 import sanju from "./../Assets/img/experience/sanju.png";
-export const Experience = () => {
+import { ThemeProps } from "../Commons/ThemeProps";
+
+export const Experience = ({ theme }: ThemeProps) => {
   return (
     <>
       <FlexContainerColumn id="experience">
@@ -53,8 +54,8 @@ export const Experience = () => {
             </div>
           </VerticalTimelineElement>
 
-          <VerticalTimelineElement className="vertical-timeline-element--work">
-            <Image src={sanju} />
+          <VerticalTimelineElement className="sjt">
+            <Image src={sanju} className="sjt" />
             <div>
               <h3 className="vertical-timeline-element-title">Profesor</h3>
               <h4 className="vertical-timeline-element-subtitle">
@@ -70,15 +71,13 @@ export const Experience = () => {
 };
 
 const FlexContainerColumn = styled.div`
-  background: #fafafa;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
-  background-color: #fafafa;
   @media (max-width: 768px) {
-    width: 90%;
+    width: 100%;
     padding: 0;
   }
 `;
@@ -86,6 +85,15 @@ const FlexContainerColumn = styled.div`
 const Image = styled.img`
   width: 20%;
   padding: 1em;
+
+  &.sjt {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  @media (max-width: 768px) {
+    width: 30%;
+    padding: 5px;
+  }
 `;
 const Link = styled.a`
   font-weight: bold;
@@ -97,6 +105,7 @@ const VerticalTimeline = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+
 const VerticalTimelineElement = styled.div`
   background: #f0f0f0;
   max-width: 50%;
@@ -105,21 +114,19 @@ const VerticalTimelineElement = styled.div`
   margin: 1em;
   box-shadow: 1px 1px 2px 0px #cbcbcb;
   display: flex;
+  color: #fafafa;
+  width: 100%;
   &.redbee {
     background: #e12027;
-    color: white;
   }
   &.glamit {
     background: #3dced9;
-    color: white;
   }
   &.fit {
     background: #dc6a09;
-    color: white;
   }
   &.sjt {
-    background: #e12027;
-    color: white;
+    background: black;
   }
   h3 {
     text-transform: uppercase;
@@ -128,5 +135,15 @@ const VerticalTimelineElement = styled.div`
 
   h4 {
     font-weight: 300;
+  }
+
+  div {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+    flex-direction: column;
+    align-items: center;
   }
 `;

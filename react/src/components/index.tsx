@@ -12,7 +12,12 @@ export const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState("light");
   const isDark = theme === "dark";
-  const toggleTheme = () => setTheme(isDark ? "light" : "dark");
+  const toggleTheme = () => {
+    document.body.classList.remove("dark");
+    document.body.classList.remove("light");
+    setTheme(isDark ? "light" : "dark");
+    document.body.classList.add(isDark ? "light" : "dark");
+  };
 
   return (
     <>
@@ -24,10 +29,10 @@ export const Home = () => {
       />
       <Header />
       <Separator />
-      <AboutMe />
-      <Experience />
-      <Technologies />
-      <Contact />
+      <AboutMe theme={theme} />
+      <Experience theme={theme} />
+      <Technologies theme={theme} />
+      <Contact theme={theme} />
       <FullScreenMenu isOpen={isOpen} handleChange={setIsOpen} />
     </>
   );
