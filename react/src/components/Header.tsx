@@ -9,10 +9,8 @@ export const Header = () => {
       <HeaderContainer>
         <FlexContainer>
           <TextContainer>
-            <Subtitle id="title">Nicolás Lucero</Subtitle>
-            <Title id="subtitle">
-              Software developer <Ampersan>&</Ampersan> designer
-            </Title>
+            <Title id="title">Nicolás Lucero</Title>
+            <Subtitle id="subtitle">Software developer</Subtitle>
           </TextContainer>
         </FlexContainer>
       </HeaderContainer>
@@ -38,12 +36,6 @@ const HeaderContainer = styled.div`
   }
 `;
 
-const Ampersan = styled.span`
-  font-size: 2em;
-  text-shadow: 4px -1px 0px #4f7dff;
-  color: white;
-`;
-
 const FlexContainer = styled.div`
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -58,19 +50,28 @@ const FlexContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-  color: var(--white);
+  color: white;
   display: block;
   font-size: 20px;
   justify-content: center;
   text-align: center;
 `;
 const Title = styled.div`
+  color: white;
+  font-size: 2.4em;
+  font-weight: 500;
+  animation: cursor 1s infinite step-end;
+  position: relative;
+  font-size: 50px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #5d7693c7;
+  padding: 5px 10px;
+`;
+const Subtitle = styled.div`
   font-size: 1.3em;
   margin: 0;
   line-height: 1;
-`;
-const Subtitle = styled.div`
-  color: var(--white);
-  font-size: 2.4em;
-  font-weight: 500;
+  font-weight: 200;
 `;

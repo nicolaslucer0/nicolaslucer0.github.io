@@ -55,7 +55,7 @@ export const AboutMe = () => {
 
           <FlexContainer>
             <LocationImage src={professor} />
-            <Text>I have 5 years of experience teaching programming.</Text>
+            <Text>I have teached programming for 5 years.</Text>
           </FlexContainer>
 
           <FlexContainer>
@@ -207,7 +207,7 @@ const Title = styled.h2`
 
   display: flex;
   align-items: center;
-  margin: 3em 0;
+  margin: 0 0 5em 0;
   &:before {
     content: "{  ";
     left: 0;

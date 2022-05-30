@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import img from "../Assets/img/me.jpg";
-import imgMobile from "../Assets/img/me_mobile.jpg";
-import imgwheel from "../Assets/img/wheel-min.png";
-import logoRedbee from "../Assets/img/redbee_logo.png";
-import bandera from "../Assets/img/bandera.png";
-import location from "../Assets/img/location.png";
-import user from "../Assets/img/user.png";
-import job from "../Assets/img/job.png";
-import professor from "../Assets/img/Professor.png";
-import hobbies from "../Assets/img/hobbies.png";
+import React from 'react'
+import styled from 'styled-components'
+import img from '../Assets/img/me.jpg'
+import imgMobile from '../Assets/img/me_mobile.jpg'
+import imgwheel from '../Assets/img/wheel-min.png'
+import logoRedbee from '../Assets/img/redbee_logo.png'
+import bandera from '../Assets/img/bandera.png'
+import location from '../Assets/img/location.png'
+import user from '../Assets/img/user.png'
+import job from '../Assets/img/job.png'
+import professor from '../Assets/img/Professor.png'
+import hobbies from '../Assets/img/hobbies.png'
 
 const AboutMe = () => {
   return (
@@ -41,7 +41,8 @@ const AboutMe = () => {
           <FlexContainer>
             <LocationImage src={user} />
             <Text>
-              I'm fullstack developer, I love to create and design new things.
+              I'm fullstack software developer, I love to create and design new
+              things.
             </Text>
           </FlexContainer>
 
@@ -55,7 +56,7 @@ const AboutMe = () => {
 
           <FlexContainer>
             <LocationImage src={professor} />
-            <Text>I have 5 years of experience teaching programming.</Text>
+            <Text>I have teached programming for 5 years.</Text>
           </FlexContainer>
 
           <FlexContainer>
@@ -66,9 +67,9 @@ const AboutMe = () => {
         </FlexContainerColumn>
       </FlexContainerRow>
     </>
-  );
-};
-export default AboutMe;
+  )
+}
+export default AboutMe
 
 const LocationImage = styled.img`
   width: 40px;
@@ -77,7 +78,7 @@ const LocationImage = styled.img`
   &:hover {
     transform: scale(1.2);
   }
-`;
+`
 
 const RedbeeImage = styled.img`
   width: 90px;
@@ -87,9 +88,9 @@ const RedbeeImage = styled.img`
   &:hover {
     transform: scale(1.2);
   }
-`;
+`
 
-const Redbee = styled.a``;
+const Redbee = styled.a``
 
 const TitleHi = styled.div`
   font-size: 3em;
@@ -99,7 +100,7 @@ const TitleHi = styled.div`
   @media (max-width: 768px) {
     font-size: 1.5em;
   }
-`;
+`
 
 const TitleDescription = styled.div`
   display: flex;
@@ -107,12 +108,12 @@ const TitleDescription = styled.div`
   div {
     display: flex;
   }
-`;
+`
 
 const FlexContainer = styled.div`
   display: flex;
   align-items: center;
-`;
+`
 
 const FlexContainerRow = styled.div`
   display: flex;
@@ -121,7 +122,7 @@ const FlexContainerRow = styled.div`
     flex-direction: column;
     height: auto;
   }
-`;
+`
 
 const FlexContainerColumn = styled.div`
   display: flex;
@@ -135,13 +136,13 @@ const FlexContainerColumn = styled.div`
     margin: auto;
     height: auto;
   }
-`;
+`
 
 const Picture = styled.picture`
   @media (max-width: 768px) {
     width: 100;
   }
-`;
+`
 
 const Image = styled.img`
   width: auto;
@@ -151,10 +152,10 @@ const Image = styled.img`
     height: auto;
     width: 100%;
   }
-`;
+`
 const Text = styled.p`
   font-size: 20px;
-`;
+`
 
 const Name = styled.span`
   position: relative;
@@ -165,7 +166,7 @@ const Name = styled.span`
   &:hover {
     text-shadow: 2px -1px 0px #4f7dff;
   }
-`;
+`
 const Wheel = styled.img`
   position: relative;
   font-size: 20px;
@@ -200,7 +201,7 @@ const Wheel = styled.img`
       transform: rotate(360deg);
     }
   }
-`;
+`
 
 const Title = styled.h2`
   font-size: 1em;
@@ -209,12 +210,12 @@ const Title = styled.h2`
   align-items: center;
   margin: 3em 0;
   &:before {
-    content: "{  ";
+    content: '{  ';
     left: 0;
   }
 
   &:after {
-    content: "  }";
+    content: '  }';
     right: 0;
   }
 
@@ -400,4 +401,4 @@ const Title = styled.h2`
       transform: translate3d(0, -25%, 0);
     }
   }
-`;
+`
