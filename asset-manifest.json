@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.10a3e861.js",
+    "main.css": "/static/css/main.55f0ba8d.css",
+    "main.js": "/static/js/main.09d1b543.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/header.jpg": "/static/media/header.3663babf83255af107b4.jpg",
     "static/media/header_mobile.jpg": "/static/media/header_mobile.75b33168d2cd721ee7f9.jpg",
@@ -30,16 +30,15 @@
     "static/media/user.png": "/static/media/user.685361b01a008ad24024.png",
     "static/media/redbee_logo.png": "/static/media/redbee_logo.b08350b7c79251c9b7b6.png",
     "static/media/spring.png": "/static/media/spring.fa400041252847091807.png",
-    "static/media/man.svg": "/static/media/man.234beaa4cc929056c8e651c7da2ad7f0.svg",
     "static/media/redbee.svg": "/static/media/redbee.5813906d4ccb3887d2b8da8cfc91829e.svg",
     "static/media/glamit.svg": "/static/media/glamit.658c1bc82abdd42ee0ebe94027ea8a30.svg",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.10a3e861.js.map": "/static/js/main.10a3e861.js.map",
+    "main.55f0ba8d.css.map": "/static/css/main.55f0ba8d.css.map",
+    "main.09d1b543.js.map": "/static/js/main.09d1b543.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.10a3e861.js"
+    "static/css/main.55f0ba8d.css",
+    "static/js/main.09d1b543.js"
   ]
 }

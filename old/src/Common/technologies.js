@@ -1,19 +1,19 @@
-import React from "react";
-import styled from "styled-components";
-import java from "../Assets/img/technologies/java.png";
-import flutter from "../Assets/img/technologies/flutter.png";
-import spring from "../Assets/img/technologies/spring.png";
-import react from "../Assets/img/technologies/react.png";
-import angular from "../Assets/img/technologies/angular.png";
-import less from "../Assets/img/technologies/less.png";
-import vue from "../Assets/img/technologies/vue.png";
-import mysql from "../Assets/img/technologies/mysql.png";
-import sqlserver from "../Assets/img/technologies/sqlserver.png";
-import ts from "../Assets/img/technologies/ts.png";
-import kotlin from "../Assets/img/technologies/kotlin.png";
-import go from "../Assets/img/technologies/go.png";
-import postgre from "../Assets/img/technologies/postgres.png";
-import { Title } from "./styles";
+import React from 'react'
+import styled from 'styled-components'
+import java from '../Assets/img/technologies/java.png'
+import flutter from '../Assets/img/technologies/flutter.png'
+import spring from '../Assets/img/technologies/spring.png'
+import react from '../Assets/img/technologies/react.png'
+import angular from '../Assets/img/technologies/angular.png'
+import less from '../Assets/img/technologies/less.png'
+import vue from '../Assets/img/technologies/vue.png'
+import mysql from '../Assets/img/technologies/mysql.png'
+import sqlserver from '../Assets/img/technologies/sqlserver.png'
+import ts from '../Assets/img/technologies/ts.png'
+import kotlin from '../Assets/img/technologies/kotlin.png'
+import go from '../Assets/img/technologies/go.png'
+import postgre from '../Assets/img/technologies/postgres.png'
+import { Title } from './styles'
 
 const Technologies = () => {
   return (
@@ -124,9 +124,9 @@ const Technologies = () => {
         </FlexContainerColumn>
       </FlexContainerColumn>
     </>
-  );
-};
-export default Technologies;
+  )
+}
+export default Technologies
 
 const FlexContainerRow = styled.div`
   display: flex;
@@ -140,7 +140,7 @@ const FlexContainerRow = styled.div`
     height: auto;
     width: 90%;
   }
-`;
+`
 
 const FlexContainerColumn = styled.div`
   display: flex;
@@ -156,14 +156,14 @@ const FlexContainerColumn = styled.div`
     width: 90%;
     padding: 0;
   }
-`;
+`
 
 const SeparatorTitle = styled.h3`
   font-weight: lighter;
   font-size: 2em;
   text-transform: uppercase;
   margin: 1em 0;
-`;
+`
 
 const Card = styled.div`
   width: 30%;
@@ -193,7 +193,7 @@ const Card = styled.div`
     width: 100%;
     margin: 1em auto;
   }
-`;
+`
 
 const Image = styled.img`
   width: 20%;
@@ -204,7 +204,7 @@ const Image = styled.img`
   @media (max-width: 768px) {
     width: 60px;
   }
-`;
+`
 
 const Level = styled.div`
   height: 10px;
@@ -238,4 +238,4 @@ const Level = styled.div`
       width: 100%;
     }
   }
-`;
+`

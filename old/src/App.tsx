@@ -1,51 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./Common/Navbar/Navbar";
-import Home from "./Common";
-import NotFoundPage from "./Common/notFound.js";
+import React, { useState } from 'react'
+import Home from './Common'
+import Navbar from './Common/Navbar/Navbar'
 const App = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
-  const scroll = useHasScrolled(700);
+  const [navbarOpen, setNavbarOpen] = useState(false)
 
   const handleChange = () => {
-    setNavbarOpen(!navbarOpen);
-  };
+    setNavbarOpen(!navbarOpen)
+  }
 
   return (
     <>
-      <Router>
-        <Navbar
-          scroll={scroll}
-          navbarState={navbarOpen}
-          onChange={handleChange}
-        />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route component={NotFoundPage} />
-        </Switch>
-      </Router>
+      <Navbar navbarState={navbarOpen} onChange={handleChange} />
+      <Home />
     </>
-  );
-};
-export default App;
-
-export const useHasScrolled = (distance = 10) => {
-  const [scroll, setScroll] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      const scrollCheck = window.scrollY >= distance;
-      if (scrollCheck !== scroll) {
-        setScroll(scrollCheck);
-      }
-    };
-
-    document.addEventListener("scroll", onScroll);
-
-    return () => {
-      document.removeEventListener("scroll", onScroll);
-    };
-  }, [scroll, setScroll, distance]);
-
-  return scroll;
-};
+  )
+}
+export default App
