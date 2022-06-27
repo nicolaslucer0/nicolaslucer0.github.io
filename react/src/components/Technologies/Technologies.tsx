@@ -64,11 +64,17 @@ const FlexContainerRow = styled.div`
   &.parent {
     display: flex;
     justify-content: space-between;
+    width: 90%;
   }
   @media (max-width: 768px) {
     flex-direction: row;
     height: auto;
     width: 100%;
+    &.parent {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 `;
 
@@ -88,6 +94,10 @@ const FlexContainerColumn = styled.div`
   @media (max-width: 768px) {
     width: 90%;
     padding: 0;
+    &.block {
+      width: 100%;
+      margin: 1em 0;
+    }
   }
 `;
 

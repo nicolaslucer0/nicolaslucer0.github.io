@@ -34,7 +34,8 @@ const Card = styled.div`
     }
   }
   @media (max-width: 768px) {
-    width: 100%;
+    width: 100px;
+    height: 100px;
     box-sizing: border-box;
     position: relative;
     display: flex;
