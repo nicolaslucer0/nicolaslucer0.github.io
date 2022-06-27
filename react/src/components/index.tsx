@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AboutMe } from "./Aboutme";
 import { Contact } from "./Contact";
-import { Experience } from "./Experience";
+import { Experience } from "./Experience/Experience";
 import { FullScreenMenu } from "./FullScreenMenu";
 import { Header } from "./Header";
 import { Navbar } from "./Navbar";
