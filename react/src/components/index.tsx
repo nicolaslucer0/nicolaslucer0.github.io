@@ -6,7 +6,7 @@ import { FullScreenMenu } from "./FullScreenMenu";
 import { Header } from "./Header";
 import { Navbar } from "./Navbar";
 import { Separator } from "./Separator";
-import { Technologies } from "./Technologies";
+import { Technologies } from "./Technologies/Technologies";
 
 export const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
