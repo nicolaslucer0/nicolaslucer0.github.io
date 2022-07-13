@@ -28,9 +28,9 @@ const Card = styled.div`
   transition: 0.5s;
   background-color: white;
   &:hover {
-    transform: scale(1.05);
     .tooltip {
       opacity: 1;
+      transform: scale(1) translateY(0);
     }
   }
   @media (max-width: 768px) {
@@ -58,10 +58,11 @@ const Tooltip = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  opacity: 0;
   transition: 0.2s;
   font-weight: 100;
   text-align: center;
+  opacity: 0;
+  transform: scale(0.5) translateY(60px);
 `;
 
 const Image = styled.img`

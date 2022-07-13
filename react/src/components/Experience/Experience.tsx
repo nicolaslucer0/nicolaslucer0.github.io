@@ -16,7 +16,8 @@ export const Experience = ({ theme }: ThemeProps) => {
           <TimelineCard
             image={redbee}
             title="redbee"
-            classname={"redbee"}
+            classname="redbee"
+            location="left"
             position="Fullstack developer"
             description={
               "Web and Mobile development. Front and back end using Flutter and Java. Part of Partners pics build."
@@ -24,8 +25,9 @@ export const Experience = ({ theme }: ThemeProps) => {
           />
           <TimelineCard
             image={glamit}
-            classname={"glamit"}
+            classname="glamit"
             title="Glamit"
+            location="right"
             position="Front end developer"
             description={
               "Frontend developer using ReactJS and Less, Ecommerce builder."
@@ -33,14 +35,16 @@ export const Experience = ({ theme }: ThemeProps) => {
           />
           <TimelineCard
             image={factorit}
-            classname={"fit"}
+            classname="fit"
             title="FactorIT"
+            location="left"
             position="Fullstack developer"
             description={"Web development, working building Walmart apps."}
           />
           <TimelineCard
             image={sanju}
-            classname={"sjt"}
+            classname="sjt"
+            location="right"
             title="Instituto Técnico Industrial San Judas Tadeo"
             position="Profesor"
             description={"IT professor, algorythms and C develompent."}
@@ -64,8 +68,26 @@ const FlexContainerColumn = styled.div`
 `;
 
 const VerticalTimeline = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: #eaeaea;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    margin-left: -3px;
+    @media (max-width: 768px) {
+      left: 5%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      box-sizing: border-box;
+      justify-content: flex-start;
+      margin: 0;
+      align-self: flex-start;
+    }
+  }
 `;
