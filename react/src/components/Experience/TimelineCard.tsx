@@ -29,70 +29,10 @@ export const TimelineCard = ({
   </ExperienceCard>
 );
 const ExperienceCard = styled.div`
-  width: 60%;
-  padding: 10px 40px;
+  padding: 0 10px;
   position: relative;
   box-sizing: border-box;
   background-color: inherit;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: #f1f1f1;
-    border: 4px solid #ffffff;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-
-  &.right {
-    left: 20%;
-    @media (max-width: 768px) {
-      left: 0;
-      width: 95%;
-      box-sizing: border-box;
-      position: relative;
-      padding: 10px;
-      margin: auto;
-      &::after {
-        display: none;
-      }
-    }
-  }
-
-  &.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 20px;
-    border: medium solid red;
-    border-width: 10px 10px 10px 0;
-    @media (max-width: 768px) {
-      display: none;
-    }
-  }
-
-  &.redbee::before {
-    border-color: transparent #e12027 transparent transparent;
-  }
-  &.glamit::before {
-    border-color: transparent #3dced9 transparent transparent;
-  }
-  &.fit::before {
-    border-color: transparent #dc6a09 transparent transparent;
-  }
-  &.sjt::before {
-    border-color: transparent black transparent transparent;
-  }
-  &.right::after {
-    left: -16px;
-  }
-
   @media (max-width: 768px) {
     width: 70%;
     padding: 10px 40px;
@@ -106,6 +46,7 @@ const CardBody = styled.div`
   color: white;
   min-height: 250px;
   align-items: center;
+  height: 250px;
 
   h3 {
     text-transform: uppercase;
@@ -159,7 +100,7 @@ const Image = styled.img`
 const CardDetails = styled.div`
   width: 60%;
   padding: 1em;
-
+  font-size: 12px;
   @media (max-width: 768px) {
     width: 90%;
   }

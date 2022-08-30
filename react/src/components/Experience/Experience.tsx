@@ -1,18 +1,33 @@
 import styled from "styled-components";
-import { Title } from "../Styles";
-import redbee from "./../../Assets/img/experience/redbee.svg";
-import glamit from "./../../Assets/img/experience/glamit.svg";
-import factorit from "./../../Assets/img/experience/factorit.svg";
-import sanju from "./../../Assets/img/experience/sanju.png";
-import { ThemeProps } from "../../Commons/ThemeProps";
+import { responsive, Title } from "../Styles";
+import redbee from "./../../assets/img/experience/redbee.svg";
+import glamit from "./../../assets/img/experience/glamit.svg";
+import factorit from "./../../assets/img/experience/factorit.svg";
+import sanju from "./../../assets/img/experience/sanju.png";
+import { ThemeProps } from "../../commons/ThemeProps";
 import { TimelineCard } from "./TimelineCard";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 export const Experience = ({ theme }: ThemeProps) => {
   return (
     <>
       <FlexContainerColumn id="experience">
-        <Title>My work</Title>
-        <VerticalTimeline>
+        <Title>My career</Title>
+      </FlexContainerColumn>
+      <Container>
+        <Carousel
+          swipeable
+          arrows={false}
+          showDots={false}
+          responsive={responsive}
+          autoPlaySpeed={4000}
+          autoPlay
+          rewind
+          rewindWithAnimation={true}
+          slidesToSlide={1}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+        >
           <TimelineCard
             image={redbee}
             title="redbee"
@@ -49,45 +64,27 @@ export const Experience = ({ theme }: ThemeProps) => {
             position="Profesor"
             description={"IT professor, algorythms and C develompent."}
           />
-        </VerticalTimeline>
-      </FlexContainerColumn>
+        </Carousel>
+      </Container>
     </>
   );
 };
 
 const FlexContainerColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: auto;
+  display: flex;
+  justify-content: center;
   @media (max-width: 768px) {
     width: 100%;
     padding: 0;
   }
 `;
 
-const VerticalTimeline = styled.div`
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 6px;
-    background-color: #eaeaea;
-    top: 0;
-    bottom: 0;
-    left: 20%;
-    margin-left: -3px;
-    @media (max-width: 768px) {
-      left: 5%;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      width: 90%;
-      box-sizing: border-box;
-      justify-content: flex-start;
-      margin: 0;
-      align-self: flex-start;
-    }
+const Container = styled.div`
+  margin: auto;
+  width: 80%;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0;
   }
 `;

@@ -15,18 +15,13 @@ const Card = styled.div`
   width: 100px;
   height: 100px;
   display: flex;
-  margin: 1em;
+  margin: 60px 0;
   justify-content: space-between;
   position: relative;
-  flex-grow: 0;
   box-sizing: border-box;
   align-items: center;
-  box-shadow: 3px 3px 5px 0px #00000054;
   padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ececec;
   transition: 0.5s;
-  background-color: white;
   &:hover {
     .tooltip {
       opacity: 1;
