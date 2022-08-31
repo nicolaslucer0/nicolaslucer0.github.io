@@ -18,14 +18,13 @@ export const AboutMe = ({ theme }: ThemeProps) => {
             <br />
             <br />
             <div>
-              🎧 Electronic music producer
-              <a
+              <CustomLink
                 href="https://www.youtube.com/watch?v=bbYfjTrX1lw"
                 target="_blank"
                 rel="noreferrer"
               >
-                , check this tune
-              </a>
+                🎧 Electronic music producer
+              </CustomLink>
             </div>
             📕 IT Profressor.
           </MyDescription>
@@ -48,6 +47,13 @@ export const AboutMe = ({ theme }: ThemeProps) => {
 };
 export default AboutMe;
 
+const CustomLink = styled.a`
+  text-decoration: none;
+  transition: 0.2s;
+  &:hover {
+    font-size: 25px;
+  }
+`;
 const SolidContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -55,12 +61,24 @@ const SolidContainer = styled.div`
   border-radius: 10px;
   padding: 2em;
   width: 70%;
-
+  margin: 2em 0;
+  box-sizing: border-box;
   &.light {
     background: white;
+    a {
+      color: black;
+    }
   }
   &.dark {
+    a {
+      color: white;
+    }
+
     background: ${Black};
+  }
+  @media (max-width: 768px) {
+    padding: 1em;
+    width: 90%;
   }
 `;
 const GradientContainer = styled.div`
@@ -111,9 +129,13 @@ const GradientContainer = styled.div`
 const FlexContainerRow = styled.div`
   display: flex;
   margin: auto;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 const LocationImage = styled.img`
-  width: 40px;
+  width: 20px;
   transition: 0.2s;
   margin: 0 10px;
   &:hover {
@@ -136,8 +158,11 @@ const Redbee = styled.a``;
 const MyItems = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
   padding: 1em;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0;
+  }
 `;
 const MyDescription = styled.div`
   display: flex;
@@ -147,7 +172,7 @@ const MyDescription = styled.div`
   padding: 1em;
 
   @media (max-width: 768px) {
-    width: 80%;
+    width: 100%;
     padding: 0;
     margin: auto;
     height: auto;

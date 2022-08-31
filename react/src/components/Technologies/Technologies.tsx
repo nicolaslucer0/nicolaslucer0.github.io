@@ -12,7 +12,12 @@ import react from "../../assets/img/technologies/react.png";
 import spring from "../../assets/img/technologies/spring.png";
 import sqlserver from "../../assets/img/technologies/sqlserver.png";
 import ts from "../../assets/img/technologies/ts.png";
+import js from "../../assets/img/technologies/js.png";
+import terminal from "../../assets/img/technologies/terminal.png";
+import git from "../../assets/img/technologies/git.png";
+import npm from "../../assets/img/technologies/npm.png";
 import vue from "../../assets/img/technologies/vue.png";
+import figma from "../../assets/img/technologies/figma.png";
 import { ThemeProps } from "../../commons/ThemeProps";
 import { techno, Title } from "../Styles";
 import { TechnologyCard } from "./TechnologyCard";
@@ -29,26 +34,30 @@ export const Technologies = ({ theme }: ThemeProps) => {
           autoPlay
           swipeable
           arrows={false}
-          centerMode={true}
-          pauseOnHover={false}
+          pauseOnHover
           autoPlaySpeed={2000}
           responsive={techno}
           rewindWithAnimation={true}
           removeArrowOnDeviceType={["tablet", "mobile"]}
         >
-          <TechnologyCard image={react} tooltip="React" />
-          <TechnologyCard image={ts} tooltip="Typescript" />
-          <TechnologyCard image={less} tooltip="LESS" />
-          <TechnologyCard image={flutter} tooltip="Flutter" />
-          <TechnologyCard image={angular} tooltip="Angular" />
-          <TechnologyCard image={vue} tooltip="VueJS" />
-          <TechnologyCard image={java} tooltip="Java" />
-          <TechnologyCard image={spring} tooltip="Spring" />
-          <TechnologyCard image={go} tooltip="Go" />
-          <TechnologyCard image={kotlin} tooltip="Kotlin" />
-          <TechnologyCard image={postgre} tooltip="PostgreSQL" />
-          <TechnologyCard image={mysql} tooltip="MySQL" />
-          <TechnologyCard image={sqlserver} tooltip="SQL Server" />
+          <TechnologyCard image={react} tooltip="React" resize />
+          <TechnologyCard image={ts} tooltip="Typescript" resize />
+          <TechnologyCard image={js} tooltip="Javascript" />
+          <TechnologyCard image={less} tooltip="LESS" resize />
+          <TechnologyCard image={figma} tooltip="Figma" />
+          <TechnologyCard image={flutter} tooltip="Flutter" resize />
+          <TechnologyCard image={angular} tooltip="Angular" resize />
+          <TechnologyCard image={vue} tooltip="VueJS" resize />
+          <TechnologyCard image={npm} tooltip="npm" />
+          <TechnologyCard image={git} tooltip="GIT" />
+          <TechnologyCard image={java} tooltip="Java" resize />
+          <TechnologyCard image={spring} tooltip="Spring" resize />
+          <TechnologyCard image={go} tooltip="Go" resize />
+          <TechnologyCard image={kotlin} tooltip="Kotlin" resize />
+          <TechnologyCard image={terminal} tooltip="Terminal" />
+          <TechnologyCard image={postgre} tooltip="PostgreSQL" resize />
+          <TechnologyCard image={mysql} tooltip="MySQL" resize />
+          <TechnologyCard image={sqlserver} tooltip="SQL Server" resize />
         </Carousel>
       </Container>
     </>
@@ -57,7 +66,7 @@ export const Technologies = ({ theme }: ThemeProps) => {
 
 const Container = styled.div`
   margin: auto;
-  width: 80%;
+  width: 70%;
   @media (max-width: 768px) {
     width: 100%;
     padding: 0;

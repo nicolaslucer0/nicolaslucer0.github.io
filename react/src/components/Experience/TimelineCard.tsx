@@ -34,8 +34,7 @@ const ExperienceCard = styled.div`
   box-sizing: border-box;
   background-color: inherit;
   @media (max-width: 768px) {
-    width: 70%;
-    padding: 10px 40px;
+    width: 100%;
     box-sizing: border-box;
   }
 `;

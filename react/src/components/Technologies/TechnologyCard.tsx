@@ -2,10 +2,15 @@ import styled from "styled-components";
 type TechnologyCardProps = {
   image: string;
   tooltip: string;
+  resize?: boolean;
 };
-export const TechnologyCard = ({ image, tooltip }: TechnologyCardProps) => (
+export const TechnologyCard = ({
+  image,
+  tooltip,
+  resize,
+}: TechnologyCardProps) => (
   <Card>
-    <Image src={image} />
+    <Image className={resize ? "resize" : ""} src={image} />
     <Tooltip className="tooltip">{tooltip}</Tooltip>
   </Card>
 );
@@ -15,12 +20,11 @@ const Card = styled.div`
   width: 100px;
   height: 100px;
   display: flex;
-  margin: 60px 0;
-  justify-content: space-between;
+  margin: 60px auto;
+  justify-content: center;
   position: relative;
   box-sizing: border-box;
   align-items: center;
-  padding: 10px;
   transition: 0.5s;
   &:hover {
     .tooltip {
@@ -61,6 +65,8 @@ const Tooltip = styled.div`
 `;
 
 const Image = styled.img`
-  width: 100%;
+  &.resize {
+    width: 100%;
+  }
   transition: 0.5s;
 `;
