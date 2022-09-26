@@ -13,13 +13,13 @@ code {
     monospace;
 }
 
-body.light{
+body.light {
   background-color: #fafafa;
   color: #010101;
 }
 
 
-body.dark{
+body.dark {
   background-color: #010101;
   color: #fafafa;
 }

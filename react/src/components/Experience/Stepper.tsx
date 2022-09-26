@@ -27,6 +27,7 @@ const renderSteps = (
     <Container className={theme}>
       {stepsNumber.map((step) => (
         <Link
+          key={step.index}
           className={`${theme} ${activeStep === step.index ? "active" : ""}`}
           onClick={() => setActiveStep(step.index)}
         >
@@ -82,12 +83,12 @@ const Link = styled.li`
   position: relative;
   margin-top: 10px;
   width: 100%;
-
+  cursor: pointer;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 15px;
-
+  transition: 0.3s;
   &.light {
     color: black;
   }
@@ -118,6 +119,9 @@ const Link = styled.li`
     border: 2px solid black;
   }
 
+  &:hover {
+    transform: scale(1.2);
+  }
   &.active::after,
   &:hover::after {
     background: #8b008b;

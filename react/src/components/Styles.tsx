@@ -8,7 +8,7 @@ export const Title = styled.h2`
   font-weight: lighter;
   text-align: center;
   padding-top: 1em;
-  margin: 1em 0 0 0;
+  margin: 1em 0 1em 0;
   @media (max-width: 768px) {
     margin: 1em 0;
     font-size: 3em;

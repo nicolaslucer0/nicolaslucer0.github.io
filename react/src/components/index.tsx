@@ -10,8 +10,9 @@ import { Technologies } from "./Technologies/Technologies";
 
 export const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const isDark = theme === "dark";
+  if (isDark) document.body.classList.add("dark");
   const toggleTheme = () => {
     document.body.classList.remove("dark");
     document.body.classList.remove("light");

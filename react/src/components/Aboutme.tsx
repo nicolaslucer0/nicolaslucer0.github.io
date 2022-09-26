@@ -70,6 +70,7 @@ const SolidContainer = styled.div`
     }
   }
   &.dark {
+    color: white;
     a {
       color: white;
     }

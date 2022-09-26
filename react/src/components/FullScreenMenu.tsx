@@ -78,7 +78,7 @@ export const FullScreenMenu = ({
                   justifyContent: "center",
                   width: "100%",
                   height: "100vh",
-                  zIndex: 1,
+                  zIndex: 3,
                   backgroundImage: backgroundImage,
                   transform: transform,
                   display: "flex",
