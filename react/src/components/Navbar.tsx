@@ -30,8 +30,10 @@ const StyledNavbar = styled(animated.nav)`
   top: 0;
   left: 0;
   position: fixed;
-  height: 8vh;
-  background: linear-gradient(180deg, #00000078, transparent);
+  height: 10vh;
+  background: #00000026;
+  box-shadow: 0 0 6px 0 #00000080;
+  backdrop-filter: blur(10px);
   transition: 0.5s;
   box-sizing: border-box;
 

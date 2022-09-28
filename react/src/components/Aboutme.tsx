@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import bandera from "../assets/img/bandera.png";
 import logoRedbee from "../assets/img/redbee_logo.png";
-import { Black } from "../commons/Colors";
 import { ThemeProps } from "../commons/ThemeProps";
 
 export const AboutMe = ({ theme }: ThemeProps) => {
@@ -58,24 +57,27 @@ const SolidContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-items: center;
-  border-radius: 10px;
+  border-radius: 30px;
   padding: 2em;
   width: 70%;
   margin: 2em 0;
   box-sizing: border-box;
+  box-shadow: 0 0 9px 0 #00082935;
+  backdrop-filter: blur(5px);
+  z-index: 1;
+
   &.light {
-    background: white;
+    background: #ffffff45;
     a {
       color: black;
     }
   }
   &.dark {
+    background: #0008297d;
     color: white;
     a {
       color: white;
     }
-
-    background: ${Black};
   }
   @media (max-width: 768px) {
     padding: 1em;
@@ -124,7 +126,6 @@ const GradientContainer = styled.div`
   }
   @media (max-width: 768px) {
     flex-direction: column;
-    height: auto;
   }
 `;
 const FlexContainerRow = styled.div`

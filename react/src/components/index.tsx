@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import { AboutMe } from "./Aboutme";
 import { Contact } from "./Contact";
 import { Experience } from "./Experience/Experience";
@@ -29,6 +30,7 @@ export const Home = () => {
         toggleTheme={toggleTheme}
       />
       <Header />
+
       <Separator />
       <AboutMe theme={theme} />
       <Experience theme={theme} />

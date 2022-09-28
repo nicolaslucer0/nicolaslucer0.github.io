@@ -47,3 +47,15 @@ export const techno = {
     items: 1,
   },
 };
+
+export const RelativeContainer = styled.div`
+  position: relative;
+  z-index: 1;
+  &.dark {
+    background: black;
+  }
+
+  &.light {
+    background: white;
+  }
+`;

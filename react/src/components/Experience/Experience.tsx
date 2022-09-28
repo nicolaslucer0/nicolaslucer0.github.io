@@ -1,7 +1,7 @@
 import "react-multi-carousel/lib/styles.css";
 import styled from "styled-components";
 import { ThemeProps } from "../../commons/ThemeProps";
-import { Title } from "../Styles";
+import { RelativeContainer, Title } from "../Styles";
 import factorit from "./../../assets/img/experience/factorit.svg";
 import glamit from "./../../assets/img/experience/glamit.svg";
 import redbee from "./../../assets/img/experience/redbee.svg";
@@ -51,14 +51,14 @@ const steps = [
 
 export const Experience = ({ theme }: ThemeProps) => {
   return (
-    <>
+    <RelativeContainer className={theme}>
       <FlexContainerColumn id="experience">
         <Title>My career</Title>
       </FlexContainerColumn>
       <Container>
         <Stepper steps={steps} startOn={3} theme={theme} />
       </Container>
-    </>
+    </RelativeContainer>
   );
 };
 

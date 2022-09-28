@@ -1,30 +1,30 @@
 import Carousel from "react-multi-carousel";
 import styled from "styled-components";
 import angular from "../../assets/img/technologies/angular.png";
+import figma from "../../assets/img/technologies/figma.png";
 import flutter from "../../assets/img/technologies/flutter.png";
+import git from "../../assets/img/technologies/git.png";
 import go from "../../assets/img/technologies/go.png";
 import java from "../../assets/img/technologies/java.png";
+import js from "../../assets/img/technologies/js.png";
 import kotlin from "../../assets/img/technologies/kotlin.png";
 import less from "../../assets/img/technologies/less.png";
 import mysql from "../../assets/img/technologies/mysql.png";
+import npm from "../../assets/img/technologies/npm.png";
 import postgre from "../../assets/img/technologies/postgres.png";
 import react from "../../assets/img/technologies/react.png";
 import spring from "../../assets/img/technologies/spring.png";
 import sqlserver from "../../assets/img/technologies/sqlserver.png";
-import ts from "../../assets/img/technologies/ts.png";
-import js from "../../assets/img/technologies/js.png";
 import terminal from "../../assets/img/technologies/terminal.png";
-import git from "../../assets/img/technologies/git.png";
-import npm from "../../assets/img/technologies/npm.png";
+import ts from "../../assets/img/technologies/ts.png";
 import vue from "../../assets/img/technologies/vue.png";
-import figma from "../../assets/img/technologies/figma.png";
 import { ThemeProps } from "../../commons/ThemeProps";
-import { techno, Title } from "../Styles";
+import { RelativeContainer, techno, Title } from "../Styles";
 import { TechnologyCard } from "./TechnologyCard";
 
 export const Technologies = ({ theme }: ThemeProps) => {
   return (
-    <>
+    <RelativeContainer className={theme}>
       <FlexContainerColumn id="technologies">
         <Title>Technologies</Title>
       </FlexContainerColumn>
@@ -60,13 +60,14 @@ export const Technologies = ({ theme }: ThemeProps) => {
           <TechnologyCard image={sqlserver} tooltip="SQL Server" resize />
         </Carousel>
       </Container>
-    </>
+    </RelativeContainer>
   );
 };
 
 const Container = styled.div`
   margin: auto;
   width: 70%;
+
   @media (max-width: 768px) {
     width: 100%;
     padding: 0;

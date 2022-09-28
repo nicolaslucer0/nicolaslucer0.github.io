@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.51c5a96e.css",
-    "main.js": "/static/js/main.2db22388.js",
+    "main.js": "/static/js/main.6d33c4be.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/header.jpg": "/static/media/header.3663babf83255af107b4.jpg",
     "static/media/header_mobile.jpg": "/static/media/header_mobile.75b33168d2cd721ee7f9.jpg",
-    "static/media/instagram.png": "/static/media/instagram.56f8be5e8e707163a2c8.png",
     "static/media/kotlin.png": "/static/media/kotlin.0e22a842339118ef9a10.png",
+    "static/media/instagram.png": "/static/media/instagram.32d92232f17dcef28698.png",
     "static/media/contact.jpeg": "/static/media/contact.c778d0ade5994c0805c0.jpeg",
     "static/media/Poppins-Light.ttf": "/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
     "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
@@ -22,22 +22,23 @@
     "static/media/gmail.png": "/static/media/gmail.491b662595dc95ef157a.png",
     "static/media/ts.png": "/static/media/ts.9b1779a2fd3504559e59.png",
     "static/media/mysql.png": "/static/media/mysql.1dc2631b700f5f1688c4.png",
-    "static/media/twitch.png": "/static/media/twitch.0d685e6a2f55e5080b16.png",
+    "static/media/linkedin.png": "/static/media/linkedin.fbef5d20d33d624d9c30.png",
     "static/media/factorit.svg": "/static/media/factorit.60226b7fc05feccca184e10e9c93b5f2.svg",
     "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/redbee_logo.png": "/static/media/redbee_logo.b08350b7c79251c9b7b6.png",
     "static/media/spring.png": "/static/media/spring.fa400041252847091807.png",
+    "static/media/me.png": "/static/media/me.51f7d67ddf51761c706c.png",
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "static/media/redbee.svg": "/static/media/redbee.5813906d4ccb3887d2b8da8cfc91829e.svg",
     "static/media/glamit.svg": "/static/media/glamit.658c1bc82abdd42ee0ebe94027ea8a30.svg",
     "index.html": "/index.html",
     "main.51c5a96e.css.map": "/static/css/main.51c5a96e.css.map",
-    "main.2db22388.js.map": "/static/js/main.2db22388.js.map",
+    "main.6d33c4be.js.map": "/static/js/main.6d33c4be.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51c5a96e.css",
-    "static/js/main.2db22388.js"
+    "static/js/main.6d33c4be.js"
   ]
 }
