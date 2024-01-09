@@ -1,15 +1,16 @@
 body {
   margin: 0;
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: .5s;
+  transition: 0.5s;
+  background: hsl(202.26deg 100% 94.71%) 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -18,33 +19,27 @@ body.light {
   color: #010101;
 }
 
-
 body.dark {
   background-color: #010101;
   color: #fafafa;
 }
 
-
-
-
 @font-face {
   font-family: "Lato";
-  src: local("Lato"),
-   url("./assets/fonts/Lato-Regular.ttf") format("truetype");
+  src: local("Lato"), url("./assets/fonts/Lato-Regular.ttf") format("truetype");
   font-weight: normal;
-  }
-
+}
 
 @font-face {
   font-family: "Poppins";
   src: local("Poppins"),
-   url("./assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+    url("./assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
   font-weight: normal;
-  }
-  
+}
+
 @font-face {
   font-family: "PoppinsLight";
   src: local("PoppinsLight"),
-   url("./assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+    url("./assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
   font-weight: normal;
-  }
+}

@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import { Black } from "../../styles/Colors";
+import { radius } from "../../styles/Styles";
 
 type TimelineCardProps = {
-  image: string;
+  image: any;
   title: string;
   position: string;
   classname: string;
   description: string;
-  location: string;
 };
 export const TimelineCard = ({
   image,
@@ -30,9 +31,11 @@ export const TimelineCard = ({
 );
 const ExperienceCard = styled.div`
   padding: 0 10px;
+  margin-bottom: 10px;
   position: relative;
   box-sizing: border-box;
   background-color: inherit;
+  width: -webkit-fill-available;
   @media (max-width: 768px) {
     width: 100%;
     box-sizing: border-box;
@@ -41,12 +44,19 @@ const ExperienceCard = styled.div`
 
 const CardBody = styled.div`
   display: flex;
-  border-radius: 15px;
-  color: white;
-  min-height: 250px;
-  align-items: center;
-  height: 250px;
+  border-radius: ${radius};
+  height: 150px;
 
+  color: white;
+  padding-top: 25px;
+  background: #ffffff;
+  box-shadow: 0 2px 2px 0 #eeeeee40;
+  border-radius: ${radius};
+  box-shadow: 0px 16px 15px -10px rgba(105, 96, 215, 0.0944602);
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
   h3 {
     text-transform: uppercase;
     font-weight: 300;
@@ -57,16 +67,16 @@ const CardBody = styled.div`
   }
 
   &.redbee {
-    background: linear-gradient(45deg, #e12027, #0044ff61);
+    background: #e12027;
   }
   &.glamit {
-    background: linear-gradient(45deg, #3dced9, #0044ff61);
+    background: #3dced9;
   }
   &.fit {
-    background: linear-gradient(45deg, #dc6a09, #e400ff94);
+    background: ${Black};
   }
   &.sjt {
-    background: linear-gradient(45deg, black, #0044ff61);
+    background: #0044ff61;
   }
 
   @media (max-width: 768px) {

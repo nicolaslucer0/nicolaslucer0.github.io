@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Title } from "./Styles";
+import { Title } from "../styles/Styles";
 
 export const NotFound = () => {
   return (

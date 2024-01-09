@@ -1,178 +1,87 @@
 import styled from "styled-components";
-import bandera from "../assets/img/bandera.png";
-import logoRedbee from "../assets/img/redbee_logo.png";
-import { ThemeProps } from "../commons/ThemeProps";
+import me from "../assets/img/aboutme.jpg";
+import { FlexContainerRow, Padding } from "../styles/Grid";
+import { radius } from "../styles/Styles";
 
-export const AboutMe = ({ theme }: ThemeProps) => {
-  return (
-    <GradientContainer className={theme}>
-      <SolidContainer className={theme}>
-        <h2>About me.</h2>
-        <FlexContainerRow id="about-me">
-          <MyDescription>
-            Hi! My name is Nico and I'am senior software engineer and javascript
-            enthusiast. I am currently working in redbee studios, taking client
-            ideas to next level, using agile methodologies and good practices.
-            🚀
-            <br />
-            <br />
-            <div>
-              <CustomLink
-                href="https://www.youtube.com/watch?v=bbYfjTrX1lw"
-                target="_blank"
-                rel="noreferrer"
-              >
-                🎧 Electronic music producer
-              </CustomLink>
-            </div>
-            📕 IT Profressor.
-          </MyDescription>
-          <MyItems>
-            <div>
-              📍 I'm from Buenos Aires, Argentina
-              <LocationImage src={bandera} />
-            </div>
-            <div>
-              💼 I'm currently working at
-              <Redbee target="_blank" href="https://www.redbee.io/">
-                <RedbeeImage src={logoRedbee} />
-              </Redbee>
-            </div>
-          </MyItems>
-        </FlexContainerRow>
-      </SolidContainer>
-    </GradientContainer>
-  );
-};
+export const AboutMe = () => (
+  <Padding>
+    <FlexContainerRow id="about-me">
+      <DescriptionSection>
+        <DescriptionTitle>
+          I'm Nico a <u>software developer</u> currently working in redbee
+          studios, taking client ideas to next level, using agile methodologies
+          and good practices in Buenos Aires, Argentina. 🚀
+        </DescriptionTitle>
+        <DescriptionText>
+          I've spent the past 7 years working across different areas of software
+          development; making my career as a full stack developer. I love
+          turning complex problems into elegant, user-friendly solutions.
+        </DescriptionText>
+        <DescriptionText>
+          I believe in not just writing code, but in thinking deeply about the
+          products I help to build, ensuring they're as enjoyable to use as they
+          were for me to create.
+        </DescriptionText>
+      </DescriptionSection>
+      <PictureSection>
+        <AboutMeImage src={me} />
+      </PictureSection>
+    </FlexContainerRow>
+  </Padding>
+);
+
 export default AboutMe;
 
-const CustomLink = styled.a`
-  text-decoration: none;
-  transition: 0.2s;
-  &:hover {
-    font-size: 25px;
-  }
-`;
-const SolidContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  border-radius: 30px;
-  padding: 2em;
-  width: 70%;
-  margin: 2em 0;
-  box-sizing: border-box;
-  box-shadow: 0 0 9px 0 #00082935;
-  backdrop-filter: blur(5px);
-  z-index: 1;
-
-  &.light {
-    background: #ffffff45;
-    a {
-      color: black;
-    }
-  }
-  &.dark {
-    background: #0008297d;
-    color: white;
-    a {
-      color: white;
-    }
-  }
-  @media (max-width: 768px) {
-    padding: 1em;
-    width: 90%;
-  }
-`;
-const GradientContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: 300% 300%;
-  height: 100vh;
+const AboutMeImage = styled.img`
   width: 100%;
-
+  border-radius: ${radius};
+  object-fit: cover;
   &.light {
-    background-image: linear-gradient(
-      -45deg,
-      rgba(59, 173, 227, 1) 0%,
-      rgba(87, 111, 230, 1) 25%,
-      #2037a9 51%,
-      #001348 100%
-    );
-  }
-  &.dark {
-    background-image: linear-gradient(
-      -45deg,
-      rgba(59, 173, 227, 1) 0%,
-      rgba(87, 111, 230, 1) 25%,
-      #b4009c 51%,
-      #6300b4 100%
-    );
-  }
-
-  animation: AnimateBG 5s ease infinite;
-
-  @keyframes AnimateBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-`;
-const FlexContainerRow = styled.div`
-  display: flex;
-  margin: auto;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    height: auto;
-  }
-`;
-const LocationImage = styled.img`
-  width: 20px;
-  transition: 0.2s;
-  margin: 0 10px;
-  &:hover {
-    transform: scale(1.2);
+    box-shadow: 0 0 14px 0 #a7a7a7;
   }
 `;
 
-const RedbeeImage = styled.img`
-  width: 90px;
-  padding-left: 20px;
-  transition: 0.2s;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-`;
-
-const Redbee = styled.a``;
-
-const MyItems = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
+const PictureSection = styled.div`
+  width: 90%;
+  margin-left: 4rem;
+  z-index: 5;
   @media (max-width: 768px) {
     width: 100%;
     padding: 0;
+    margin-left: 0;
   }
 `;
-const MyDescription = styled.div`
+
+const DescriptionTitle = styled.div`
+  font-size: 35px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  margin-bottom: 1em;
+  @media (max-width: 768px) {
+    padding: 1rem;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
+`;
+
+const DescriptionText = styled.p`
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: gray;
+  @media (max-width: 768px) {
+    padding: 1rem;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
+`;
+
+const DescriptionSection = styled.div`
   display: flex;
   flex-direction: column;
-
-  width: 50%;
-  padding: 1em;
-
+  z-index: 5;
   @media (max-width: 768px) {
     width: 100%;
     padding: 0;
