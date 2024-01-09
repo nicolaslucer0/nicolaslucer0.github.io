@@ -1,4 +1,3 @@
-import "react-multi-carousel/lib/styles.css";
 import styled from "styled-components";
 import { RelativeContainer, Title, radius } from "../../styles/Styles";
 import factorit from "./../../assets/img/experience/factorit.svg";
