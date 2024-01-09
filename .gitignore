@@ -1,0 +1,12 @@
+node_modules
+dist
+build
+.idea/*
+*.iml
+*.log
+*.DS_Store
+gradle/*
+.gradle
+gradlew
+gradlew.bat
+.vscode/*
