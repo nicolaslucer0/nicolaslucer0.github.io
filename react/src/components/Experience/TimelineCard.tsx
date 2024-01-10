@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Black } from "../../styles/Colors";
+import { blue } from "../../styles/Colors";
 import { radius } from "../../styles/Styles";
 
 type TimelineCardProps = {
@@ -23,7 +23,6 @@ export const TimelineCard = ({
       </CardHeader>
       <CardDetails>
         <h3 className="vertical-timeline-element-title">{position}</h3>
-        <h4 className="vertical-timeline-element-subtitle">{title}</h4>
         <p>{description}</p>
       </CardDetails>
     </CardBody>
@@ -45,38 +44,25 @@ const ExperienceCard = styled.div`
 const CardBody = styled.div`
   display: flex;
   border-radius: ${radius};
-  height: 150px;
-
-  color: white;
+  height: 200px;
+  color: ${blue};
   padding-top: 25px;
   background: #ffffff;
-  box-shadow: 0 2px 2px 0 #eeeeee40;
+  box-shadow: 0px 0 8px 0px rgb(229 229 229);
   border-radius: ${radius};
   box-shadow: 0px 16px 15px -10px rgba(105, 96, 215, 0.0944602);
   margin-bottom: 10px;
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid rgba(105, 96, 215, 0.0944602);
+
   h3 {
-    text-transform: uppercase;
-    font-weight: 300;
+    font-weight: bold;
   }
 
   h4 {
     font-weight: 300;
-  }
-
-  &.redbee {
-    background: #e12027;
-  }
-  &.glamit {
-    background: #3dced9;
-  }
-  &.fit {
-    background: ${Black};
-  }
-  &.sjt {
-    background: #0044ff61;
   }
 
   @media (max-width: 768px) {

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { RelativeContainer, Title, radius } from "../../styles/Styles";
 import factorit from "./../../assets/img/experience/factorit.svg";
-import glamit from "./../../assets/img/experience/glamit.svg";
-import redbee from "./../../assets/img/experience/redbee.svg";
+import glamit from "./../../assets/img/experience/glamit.png";
+import redbee from "./../../assets/img/experience/redbee.png";
 import sanju from "./../../assets/img/experience/sanju.png";
 import { TimelineCard } from "./TimelineCard";
 import { blue } from "../../styles/Colors";
@@ -13,7 +13,7 @@ const steps = [
     title: "redbee",
     classname: "redbee",
     location: "left",
-    position: "Fullstack developer",
+    position: "SR sofware engineer",
     description:
       "Web and Mobile development. Front and back end using Flutter and Java. Part of Partners pics build.",
   },
@@ -22,7 +22,7 @@ const steps = [
     classname: "glamit",
     title: "Glamit",
     location: "right",
-    position: "Front end developer",
+    position: "SSR Front end developer",
     description:
       "Frontend developer using ReactJS and Less, Ecommerce builder.",
   },
@@ -31,7 +31,7 @@ const steps = [
     classname: "fit",
     title: "FactorIT",
     location: "left",
-    position: "Fullstack developer",
+    position: "SSR Fullstack developer",
     description: "Web development, working building Walmart apps.",
   },
   {
@@ -67,6 +67,7 @@ export const Experience = () => (
           <Cards>
             {steps.map(({ image, title, classname, position, description }) => (
               <TimelineCard
+                key={title}
                 image={image}
                 title={title}
                 classname={classname}
@@ -127,11 +128,11 @@ const Cards = styled.div`
 const Lines = styled.div`
   margin-left: 40px;
   margin-top: 6px;
-  transform: translateY(50px);
+  transform: translateY(100px);
 `;
 
 const Line = styled.div`
-  height: 150px;
+  height: 200px;
   width: 3px;
   background: ${blue};
   margin-left: 5.3px;

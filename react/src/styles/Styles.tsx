@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { blue } from "./Colors";
 
 export const Title = styled.h2`
   display: inline;
@@ -8,6 +9,7 @@ export const Title = styled.h2`
   font-weight: lighter;
   text-align: center;
   margin: 1em 0 1em 0;
+  color: ${blue};
   @media (max-width: 768px) {
     margin: 1em 0;
     font-size: 3em;
@@ -15,7 +17,31 @@ export const Title = styled.h2`
   }
 `;
 
-export const FireFly = styled.div``;
+export const DescriptionTitle = styled.div`
+  font-size: 35px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  margin-bottom: 1em;
+  @media (max-width: 768px) {
+    padding: 1rem;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
+`;
+
+export const DescriptionText = styled.p`
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: gray;
+  @media (max-width: 768px) {
+    padding: 1rem;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
+`;
 
 export const responsive = {
   desktop: {

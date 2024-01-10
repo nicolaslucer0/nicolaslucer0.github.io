@@ -25,13 +25,16 @@ const NavbarList = styled.ul`
   -webkit-box-pack: center;
   justify-content: center;
   list-style-type: none;
-  backdrop-filter: blur(10px) saturate(2);
+  backdrop-filter: blur(6px) saturate(1.7);
+  -webkit-backdrop-filter: blur(6px) saturate(1.7);
   border-radius: 50px;
   align-items: center;
+  background-color: #e2e2e252;
   display: flex;
   justify-content: center;
   padding: 0 10px;
   margin: 10px auto;
+  box-shadow: 0 0 3px 0px #8f8f8f52;
 `;
 
 const NavbarItem = styled.li`
@@ -67,9 +70,6 @@ export const Navbar = () => (
       </NavbarItem>
       <NavbarItem>
         <a href="#experience">Experiences</a>
-      </NavbarItem>
-      <NavbarItem>
-        <a href="#technologies">Technologies</a>
       </NavbarItem>
       <NavbarItem>
         <a href="#contact">Contact</a>

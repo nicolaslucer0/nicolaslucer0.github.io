@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { blue } from "./Colors";
 
 export const GradientContainer = styled.div`
@@ -38,6 +38,48 @@ export const GradientContainer = styled.div`
   }
 `;
 
+const moveGradient = keyframes`
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+`;
+
+const moveGradient2 = keyframes`
+  0%, 100% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+`;
+
+export const Lights = styled.div`
+  z-index: 1;
+  position: fixed;
+  opacity: 0.8;
+  width: 100%;
+  height: 100vh;
+  background-color: #d9afd9;
+  background-image: linear-gradient(30deg, white 55%, #fffa9a 100%);
+  background-size: 200% 100%; /* Adjust the size as needed */
+  animation: ${moveGradient} 5s linear infinite; /* Adjust animation duration as needed */
+`;
+
+export const Lights2 = styled.div`
+  z-index: 1;
+  opacity: 0.4;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: #d9afd9;
+  background-image: linear-gradient(320deg, white 55%, #ffacac 100%);
+  background-size: 200% 100%; /* Adjust the size as needed */
+  animation: ${moveGradient2} 3.5s linear infinite;
+`;
+
 export const FlexContainerRow = styled.div`
   display: flex;
   margin: auto;
@@ -59,7 +101,9 @@ export const BluredContainer = styled.div`
   margin: 2em 0;
   box-sizing: border-box;
   box-shadow: 0 0 9px 0 #00082935;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(6px) saturate(1.7);
+  -webkit-backdrop-filter: blur(6px) saturate(1.7);
+
   z-index: 1;
 
   &.light {
@@ -84,7 +128,7 @@ export const BluredContainer = styled.div`
 export const Padding = styled.div`
   z-index: 5;
   box-sizing: border-box;
-  padding: 10rem;
+  padding: 7rem;
   @media (max-width: 768px) {
     padding: 1rem;
   }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import me from "../assets/img/aboutme.jpg";
 import { FlexContainerRow, Padding } from "../styles/Grid";
-import { radius } from "../styles/Styles";
+import { DescriptionText, DescriptionTitle, radius } from "../styles/Styles";
 
 export const AboutMe = () => (
   <Padding>
@@ -49,32 +49,6 @@ const PictureSection = styled.div`
     width: 100%;
     padding: 0;
     margin-left: 0;
-  }
-`;
-
-const DescriptionTitle = styled.div`
-  font-size: 35px;
-  line-height: 50px;
-  letter-spacing: 1px;
-  margin-bottom: 1em;
-  @media (max-width: 768px) {
-    padding: 1rem;
-    font-size: 20px;
-    line-height: 20px;
-    letter-spacing: 0px;
-  }
-`;
-
-const DescriptionText = styled.p`
-  font-size: 20px;
-  line-height: 34px;
-  letter-spacing: 0px;
-  color: gray;
-  @media (max-width: 768px) {
-    padding: 1rem;
-    font-size: 15px;
-    line-height: 20px;
-    letter-spacing: 0px;
   }
 `;
 

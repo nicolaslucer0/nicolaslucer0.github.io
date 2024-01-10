@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7f47fe0b.css",
-    "main.js": "/static/js/main.a34efef6.js",
+    "main.css": "/static/css/main.903a0405.css",
+    "main.js": "/static/js/main.6253f0ee.js",
     "static/js/47.f2bee9e9.chunk.js": "/static/js/47.f2bee9e9.chunk.js",
     "static/media/aboutme.jpg": "/static/media/aboutme.04088ad28769f590a53c.jpg",
     "static/media/instagram.png": "/static/media/instagram.32d92232f17dcef28698.png",
@@ -10,19 +10,16 @@
     "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/sanju.png": "/static/media/sanju.a64580d2d2b6ec6da608.png",
     "static/media/Lato-Regular.ttf": "/static/media/Lato-Regular.9919edff6283018571ad.ttf",
-    "static/media/gmail.png": "/static/media/gmail.491b662595dc95ef157a.png",
     "static/media/linkedin.png": "/static/media/linkedin.fbef5d20d33d624d9c30.png",
     "static/media/factorit.svg": "/static/media/factorit.60226b7fc05feccca184e10e9c93b5f2.svg",
     "static/media/me.png": "/static/media/me.51f7d67ddf51761c706c.png",
-    "static/media/redbee.svg": "/static/media/redbee.5813906d4ccb3887d2b8da8cfc91829e.svg",
-    "static/media/glamit.svg": "/static/media/glamit.658c1bc82abdd42ee0ebe94027ea8a30.svg",
     "index.html": "/index.html",
-    "main.7f47fe0b.css.map": "/static/css/main.7f47fe0b.css.map",
-    "main.a34efef6.js.map": "/static/js/main.a34efef6.js.map",
+    "main.903a0405.css.map": "/static/css/main.903a0405.css.map",
+    "main.6253f0ee.js.map": "/static/js/main.6253f0ee.js.map",
     "47.f2bee9e9.chunk.js.map": "/static/js/47.f2bee9e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f47fe0b.css",
-    "static/js/main.a34efef6.js"
+    "static/css/main.903a0405.css",
+    "static/js/main.6253f0ee.js"
   ]
 }
