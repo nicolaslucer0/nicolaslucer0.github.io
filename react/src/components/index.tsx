@@ -29,6 +29,10 @@ const Time = styled.div`
   -webkit-backdrop-filter: blur(6px) saturate(1.7);
   box-shadow: 0 0 3px 0px #8f8f8f52;
   background-color: ${blue};
+  @media (max-width: 768px) {
+    left: 50%;
+    translate: -50%;
+  }
 `;
 
 export const Home = () => {
