@@ -123,12 +123,18 @@ const Cards = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const Lines = styled.div`
   margin-left: 40px;
   margin-top: 6px;
   transform: translateY(100px);
+  @media (max-width: 768px) {
+    margin-left: 0px;
+  }
 `;
 
 const Line = styled.div`
